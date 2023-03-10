@@ -6,6 +6,7 @@ import Function from './components/Function/Function';
 import CreatePost from './container/CreatePost/CreatePost';
 import Posts from './container/Post/Posts';
 import RightSidebar from './components/RightSidebar/RightSidebar';
+import Report from './container/Report/Report';
 
 const App = () => (
   <div className='bg-[#1c1e21]'>
@@ -14,11 +15,11 @@ const App = () => (
       <Function />
       <div className='mx-auto'>
         <CreatePost />
-        <Posts/>
+        <Posts />
       </div>
-      <RightSidebar/>
+      <RightSidebar />
+
     </div>
-    
   </div>
 );
 

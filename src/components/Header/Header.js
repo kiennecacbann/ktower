@@ -1,12 +1,18 @@
 import React from 'react';
 import images from '../../constants/images';
 import { AiFillHome, AiOutlineMessage, AiFillBell, AiFillPrinter, AiTwotoneWallet } from 'react-icons/ai';
+import { Link } from 'react-router-dom';
+import App from '../../App';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 export default function Navbar({ fixed }) {
     const [navbarOpen, setNavbarOpen] = React.useState(false);
     return (
         <nav className="relative flex flex-wrap items-center justify-between bg-[#242526] ">
             <div className="container space-x-4 pr-4 mx-auto flex flex-wrap items-center justify-between border-b-2 border-gray-700 ">
+                <Routes>
+                    <Route path='app' element={<App />} />
+                </Routes>
                 <div className="w-full pl-7 flex justify-between lg:w-auto lg:static lg:block lg:justify-start cursor-pointer ">
                     <a className=''><img src={images.logo} alt="logo img" className=' w-20 h-20 rounded-full' /></a>
                 </div>
@@ -19,13 +25,12 @@ export default function Navbar({ fixed }) {
                 >
                     <ul className="flex flex-col lg:flex-row list-none lg:ml-auto">
                         <li className="nav-item">
-                            <a
+                            <Link to="/app"
                                 className="group relative cursor-pointer px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug text-white hover:opacity-75"
-                                href="#pablo"
                             >
                                 <span><i className=" text-white opacity-75" alt='Home'><AiFillHome className='w-8 h-8' /></i></span>
                                 <span class="group-hover:opacity-100 transition-opacity bg-white p-3 text-black rounded-md absolute left-1/2 -translate-x-1/2 translate-y-full opacity-0 m-10 mx-auto">Home</span>
-                            </a>
+                            </Link>
                         </li>
                         <li className="nav-item">
                             <a
@@ -37,7 +42,7 @@ export default function Navbar({ fixed }) {
                             </a>
                         </li>
                         <li className="nav-item">
-                        <a
+                            <a
                                 className="group relative px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug text-white hover:opacity-75"
                                 href="#pablo"
                             >
@@ -46,7 +51,7 @@ export default function Navbar({ fixed }) {
                             </a>
                         </li>
                         <li className="nav-item">
-                        <a
+                            <a
                                 className="group relative px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug text-white hover:opacity-75"
                                 href="#pablo"
                             >
