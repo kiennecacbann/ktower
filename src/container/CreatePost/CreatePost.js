@@ -19,17 +19,17 @@ const CreatePost = () => {
                         <button className='font-bold text-white'>Post</button>
                     </div>
                 </div>
-                <div className='border-b-[1px] border-solid my-2 mt-2 mx-2 opacity-10'>
+                <div className='border-b-[1px] border-solid my-2 mx-2 opacity-10'>
 
                 </div>
                 <div className='items-center px-3 sm:mx-9 py-1'>
-
-                    <div className='flex items-center justify-center px-6 py-1 hover:bg-[#3a3b3c] hover:rounded-full cursor-pointer'>
+                    <label htmlFor='file' className='flex items-center justify-center px-6 py-1 hover:bg-[#3a3b3c] hover:rounded-full cursor-pointer'>
                         <div className='w-7 h-9'>
+                            <input id='file' type='file' className='hidden' />
                             <AiFillFileImage className='w-8 h-8 text-[#3366CC]' />
                         </div>
                         <p className='pl-1 text-[14px] ml-2 font-bold text-[#a5a8ac]'>Photo/video</p>
-                    </div>
+                    </label>
                 </div>
             </div>
         </div>
