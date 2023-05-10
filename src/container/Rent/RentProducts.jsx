@@ -2,6 +2,7 @@ import React from 'react'
 import images from '../../constants/images'
 import { AiOutlineSearch, AiFillCaretDown, AiOutlineShoppingCart, AiOutlineHistory, AiFillHome, AiOutlineThunderbolt } from 'react-icons/ai'
 import { Select } from 'antd'
+import { Link } from 'react-router-dom'
 const RentProducts = () => {
     return (
         <div className='bg-[#242526]'>
@@ -14,8 +15,12 @@ const RentProducts = () => {
                     <AiOutlineSearch className='mt-4 absolute ml-[470px] ' />
                 </div>
                 <div className='flex text-3xl space-x-3 text-white hover:cursor-pointer'>
-                    <AiOutlineShoppingCart />
-                    <AiOutlineHistory />
+                    <Link to='/cart'>
+                        <AiOutlineShoppingCart className='hover:bg-[#888888] hover:rounded-full' />
+                    </Link>
+                    <Link to='/orderhistory'>
+                        <AiOutlineHistory />
+                    </Link>
                 </div>
             </div>
             <div className='mt-10 '>

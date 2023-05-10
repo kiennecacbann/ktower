@@ -21,12 +21,18 @@ import houseware from '../assets/houseware.jpg'
 import bepga from '../assets/bepga.jpg'
 import bepga1 from '../assets/bepga1.png'
 import bepga2 from '../assets/bepga2.jpg'
+import background1 from '../assets/background1.jpg'
+import background2 from '../assets/background2.jpg'
+import background3 from '../assets/background3.jpg'
+import background4 from '../assets/background4.png'
+
+
 export default {
     logo,
     login_img,
     login_img2,
     user,
     like,
-    interior, interior1,table,table1,table2,table3, chair, chair1,chair2,chair3, sofa, sofa1,sofa2,sofa3, houseware, bepga, bepga1,bepga2
+    interior, interior1,table,table1,table2,table3, chair, chair1,chair2,chair3, sofa, sofa1,sofa2,sofa3, houseware, bepga, bepga1,bepga2,background1,background2,background3,background4
 
 };

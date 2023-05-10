@@ -1,26 +1,20 @@
 import React from 'react'
-import  Header  from '../../components/Header/Header'
-import Function from '../../components/Function/Function'
-import CreatePost from '../../container/CreatePost/CreatePost'
-import Posts from '../../container/Post/Posts'
-import RightSidebar from '../../components/RightSidebar/RightSidebar'
+import Header from '../../components/Header/Header'
+import HomePage from '../../components/Home Page/HomePage.jsx'
+import RecentBlog from '../../components/Recent Blog/RecentBlog.jsx'
+import Footer from '../../container/Footer/Footer.jsx'
 import { useLocation } from 'react-router-dom'
 
 
 const Home = () => {
-  const location=useLocation()
+  const location = useLocation()
   return (
-    <div className='bg-[#1c1e21]'>
-    <Header/>
-    <div className='flex h-full '>
-      <Function />
-      <div className='mx-auto'>
-        <CreatePost />
-        <Posts />
-      </div>
-      <RightSidebar />
+    <div className=''>
+      <Header />
+      <HomePage />
+      <RecentBlog/>
+      <Footer/>
     </div>
-  </div>
   )
 }
 
