@@ -41,7 +41,7 @@ function HomePage() {
     };
 
     return (
-        <div className='w-full h-[780px] m-auto pb-16 relative group'>
+        <div className='w-full h-[780px] m-auto pb-16 relative group overflow-hidden z-10'>
             <div
                 style={{ backgroundImage: `url(${slides[currentIndex].url})` }}
                 className='w-full h-full  bg-center bg-cover duration-500'

@@ -1,11 +1,12 @@
 import React from 'react'
 import { FaGreaterThan } from 'react-icons/fa'
 import Header from '../../components/Header/Header'
+import Footer from '../Footer/Footer.jsx'
 const Report = () => {
   return (
     <div className=''>
       <Header/>
-      <div className='bg-[#000000] flex h-screen'>
+      <div className='bg-white flex h-screen'>
         <div className='text-white items-center flex-col flex font-bold w-full pt-2'>
           <div className='bg-[#242526] w-[800px] border-b-2 border-[#999999] hover:bg-[#555555] p-3 cursor-pointer flex justify-between items-center'>
             <p className='font-sans'>Report 1</p>
@@ -48,13 +49,14 @@ const Report = () => {
             <FaGreaterThan />
           </div>
           <div className='bg-[#242526] w-[800px] border-b-2 border-[#999999] p-3 cursor-pointer'>
-            <input className='w-full h-[100px] bg-[#888888] text-white border-red-400 font-sans p-2 items-center rounded-sm placeholder-black' placeholder='Other...' />
+            <input className='w-full h-[100px] bg-[#888888] text-white border-red-400 font-sans p-2 items-center rounded-sm placeholder-white' placeholder='Other...' />
             <div className='items-center justify-center flex'>
               <button className='bg-[#444444] mt-2 items-center p-2 hover:bg-[#555555] w-[200px] rounded-full'>Submit</button>
             </div>
           </div>
         </div>
       </div>
+      <Footer/>
     </div>
   )
 }

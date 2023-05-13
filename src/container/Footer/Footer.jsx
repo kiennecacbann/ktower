@@ -35,7 +35,7 @@ const Footer = () => {
                         </div>
                     </div>
                 </div>
-                <div class="grid grid-cols-2 gap-8  lg:py-8 md:grid-cols-4">
+                <div class="grid grid-cols-3 gap-8  lg:py-8 md:grid-cols-3">
 
                     <div>
                         <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Company</h2>
@@ -47,9 +47,6 @@ const Footer = () => {
                                 <a href="#" class="hover:underline">Careers</a>
                             </li>
                             <li class="mb-4">
-                                <a href="#" class="hover:underline">Brand Center</a>
-                            </li>
-                            <li class="mb-4">
                                 <a href="#" class="hover:underline">Blog</a>
                             </li>
                         </ul>
@@ -57,9 +54,6 @@ const Footer = () => {
                     <div>
                         <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Help center</h2>
                         <ul class="text-gray-500 dark:text-gray-400 font-medium">
-                            <li class="mb-4">
-                                <a href="#" class="hover:underline">Discord Server</a>
-                            </li>
                             <li class="mb-4">
                                 <a href="#" class="hover:underline">Twitter</a>
                             </li>
@@ -86,24 +80,9 @@ const Footer = () => {
                         </ul>
                     </div>
                     <div>
-                        <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Download</h2>
-                        <ul class="text-gray-500 dark:text-gray-400 font-medium">
-                            <li class="mb-4">
-                                <a href="#" class="hover:underline">iOS</a>
-                            </li>
-                            <li class="mb-4">
-                                <a href="#" class="hover:underline">Android</a>
-                            </li>
-                            <li class="mb-4">
-                                <a href="#" class="hover:underline">Windows</a>
-                            </li>
-                            <li class="mb-4">
-                                <a href="#" class="hover:underline">MacOS</a>
-                            </li>
-                        </ul>
+
                     </div>
                 </div>
-
             </div>
             <div class="bg-[#25223c] dark:bg-gray-700 flex justify-center py-7">
                 <p class="text-sm text-[#9390a7] leading-9 font-medium dark:text-gray-300 sm:text-center text-[16px]">© Copyright 2023 by K-TOWER</p>

@@ -10,6 +10,9 @@ import RentProducts from './container/Rent/RentProducts';
 import ShoppingCart from './container/Shopping Cart/ShoppingCart';
 import OrderHistory from './container/OrderHistory/OrderHistory';
 import HomePage from './components/Home Page/HomePage';
+import AboutUs from './components/About Us/AboutUs';
+import Profile from './components/Profile/Profile';
+import ForgotPassword from './container/Forgot Password/ForgotPassword';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
@@ -22,7 +25,10 @@ root.render(
         <Route path="chat" element={<Chat />} />
         <Route path="rent" element={<RentProducts />} />
         <Route path="cart" element={<ShoppingCart />} />
+        <Route path="aboutus" element={<AboutUs />} />
         <Route path="orderhistory" element={<OrderHistory />} />
+        <Route path="profile" element={<Profile />} />
+        <Route path="fgpw" element={<ForgotPassword />} />
       </Routes>
     </BrowserRouter>
   </React.StrictMode>
