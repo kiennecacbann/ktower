@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import images from '../../constants/images';
-import { Link } from 'react-router-dom';
 const forPass = () => {
     return (
         <div className='grid gird-cols-1 sm:grid-cols-2 h-screen w-full'>

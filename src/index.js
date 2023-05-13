@@ -13,6 +13,7 @@ import HomePage from './components/Home Page/HomePage';
 import AboutUs from './components/About Us/AboutUs';
 import Profile from './components/Profile/Profile';
 import ForgotPassword from './container/Forgot Password/ForgotPassword';
+import Contact from './components/Contact/Contact';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
@@ -29,6 +30,7 @@ root.render(
         <Route path="orderhistory" element={<OrderHistory />} />
         <Route path="profile" element={<Profile />} />
         <Route path="fgpw" element={<ForgotPassword />} />
+        <Route path="contact" element={<Contact />} />
       </Routes>
     </BrowserRouter>
   </React.StrictMode>

@@ -51,9 +51,11 @@ export default function Navbar({ fixed }) {
                         <button className='cursor-pointer p-1 flex items-center justify-center hover:bg-gray-200 hover:font-bold text-black hover:rounded-xl '>
                             <p className=' '>Blog</p>
                         </button>
-                        <button className='cursor-pointer p-1 flex items-center justify-center hover:bg-gray-200 hover:font-bold text-black hover:rounded-xl '>
-                            <p className=' '>Contact</p>
-                        </button>
+                        <Link to='/contact'>
+                            <button className='cursor-pointer p-1 flex items-center justify-center hover:bg-gray-200 hover:font-bold text-black hover:rounded-xl '>
+                                <p className=' '>Contact</p>
+                            </button>
+                        </Link>
                         <div className='flex text-gray-400'>
                             <input placeholder='Search...' className='w-[300px] h-10 px-4 py-5 bg-transparent border-2  border-gray-300 placeholder:text-gray-400 relative rounded-3xl outline-none' />
                             <AiOutlineSearch className='mt-4 absolute ml-[270px]' />
