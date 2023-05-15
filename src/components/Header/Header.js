@@ -27,10 +27,10 @@ export default function Navbar({ fixed }) {
                 <div className="container mx-auto px-14 py-7">
                     <div className='justify-between items-center flex w-full'>
                         <div className="w-full flex justify-between lg:w-auto lg:static lg:block lg:justify-start cursor-pointer ">
-                            <div className='flex items-center justify-center space-x-3'>
+                            <a href='home' className='flex items-center justify-center space-x-3'>
                                 <a className=''><img src={images.logo} alt="logo img" className=' w-10 h-10 rounded-lg' /></a>
                                 <p className='font-bold'>K-TOWER</p>
-                            </div>
+                            </a>
                         </div>
                         <button className='cursor-pointer p-1 flex  flex-col items-center justify-center hover:bg-gray-200 hover:font-bold text-black hover:rounded-xl active:bg-gray-200'>
                             <p className=' f'>Home</p>
@@ -163,7 +163,7 @@ export default function Navbar({ fixed }) {
                                     <div className='py-3 px-2 max-h-[630px] overflow-y-scroll'>
                                         <span className='font-bold text-[22px] pb-3'>Bills</span>
                                         <div className='justify-center items-center flex flex-col '>
-                                            <a href="#" class=" w-full p-3 cursor-pointer block hover:bg-gray-200 dark:hover:bg-gray-100 dark:hover:text-white">
+                                            <a href="bill" class=" w-full p-3 cursor-pointer block hover:bg-gray-200 dark:hover:bg-gray-100 dark:hover:text-white">
                                                 <div className='flex items-center justify-center space-x-1'>
                                                     <p className='font-bold'>Bill 01 May 2023</p>
                                                 </div>

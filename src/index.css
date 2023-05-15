@@ -6,6 +6,12 @@
   li{
     @apply p-4 text-4xl
   }
+  td {
+    @apply border border-slate-400
+  }
+  th{
+    @apply border border-slate-400
+  }
 
   
 }
