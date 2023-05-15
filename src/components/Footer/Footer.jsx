@@ -1,5 +1,5 @@
 import React from 'react';
-import { AiOutlineMail } from 'react-icons/ai';
+import { AiOutlineMail, AiFillFacebook, AiFillGithub, AiFillInstagram } from 'react-icons/ai';
 import images from '../../constants/images';
 import { MdWifiCalling3 } from 'react-icons/md'
 const Footer = () => {
@@ -35,53 +35,54 @@ const Footer = () => {
                         </div>
                     </div>
                 </div>
-                <div class="grid grid-cols-3 gap-8  lg:py-8 md:grid-cols-3">
-
+                <div class="grid grid-cols-3 gap-8 lg:py-8 md:grid-cols-3 items-center justify-between px-14">
+                    <div>
+                        <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Legal</h2>
+                        <ul class="text-gray-500 dark:text-gray-400 font-medium">
+                            <li class="mb-4">
+                                <a href="/home" class="hover:underline">Home</a>
+                            </li>
+                            <li class="mb-4">
+                                <a href="/rent" class="hover:underline">Rent Interior</a>
+                            </li>
+                            <li class="mb-4">
+                                <a href="/blog" class="hover:underline">Blog</a>
+                            </li>
+                        </ul>
+                    </div>
                     <div>
                         <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Company</h2>
                         <ul class="text-gray-500 dark:text-gray-400 font-medium">
                             <li class="mb-4">
-                                <a href="#" class=" hover:underline">About</a>
+                                <a href="#about" class=" hover:underline">About</a>
                             </li>
                             <li class="mb-4">
-                                <a href="#" class="hover:underline">Careers</a>
+                                <a href="/report" class="hover:underline">Report</a>
                             </li>
                             <li class="mb-4">
-                                <a href="#" class="hover:underline">Blog</a>
+                                <a href="/contact" class="hover:underline">Contact</a>
                             </li>
                         </ul>
                     </div>
                     <div>
                         <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Help center</h2>
                         <ul class="text-gray-500 dark:text-gray-400 font-medium">
-                            <li class="mb-4">
-                                <a href="#" class="hover:underline">Twitter</a>
+                            <li class="mb-4 flex items-center space-x-1">
+                                <AiFillGithub className='mt-1' />
+                                <a href="https://github.com/kiennecacbann" target="_blank" class="hover:underline">Github</a>
                             </li>
-                            <li class="mb-4">
-                                <a href="#" class="hover:underline">Facebook</a>
+                            <li class="mb-4 flex items-center space-x-1">
+                                <AiFillFacebook className='mt-1' />
+                                <a href="https://www.facebook.com/kiennecacban" target="_blank" > Facebook</a>
                             </li>
-                            <li class="mb-4">
-                                <a href="#" class="hover:underline">Contact Us</a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div>
-                        <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Legal</h2>
-                        <ul class="text-gray-500 dark:text-gray-400 font-medium">
-                            <li class="mb-4">
-                                <a href="#" class="hover:underline">Privacy Policy</a>
-                            </li>
-                            <li class="mb-4">
-                                <a href="#" class="hover:underline">Licensing</a>
-                            </li>
-                            <li class="mb-4">
-                                <a href="#" class="hover:underline">Terms &amp; Conditions</a>
+                            <li class="mb-4 flex items-center space-x-1">
+                                <AiFillInstagram className='mt-1' />
+                                <a href="https://www.instagram.com/neikne_._/" target="_blank" class="hover:underline">Instagram</a>
                             </li>
                         </ul>
                     </div>
                     <div>
-
-                    </div>
+                </div>
                 </div>
             </div>
             <div class="bg-[#25223c] dark:bg-gray-700 flex justify-center py-7">

@@ -1,7 +1,7 @@
 import React from 'react'
 import { FaGreaterThan } from 'react-icons/fa'
 import Header from '../../components/Header/Header'
-import Footer from '../Footer/Footer.jsx'
+import Footer from '../../components/Footer/Footer.jsx'
 const Report = () => {
   return (
     <div className=''>

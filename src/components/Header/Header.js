@@ -13,13 +13,6 @@ export default function Navbar({ fixed }) {
     const [isOpen, setisOpen] = useState(false);
     const [openNoti, setopenNoti] = useState(false);
     const [openBill, setopenBill] = useState(false);
-    const toP = document.querySelector(".top")
-    window.addEventListener("scroll", function () {
-        const x = window.scrollTop | window.scrollY;
-        console.log(x);
-        if (x > 500) { toP.classList.add("sticky") }
-        else { toP.classList.remove("sticky") }
-    })
 
     return (
         <nav className="relative bg-white ">
@@ -32,127 +25,117 @@ export default function Navbar({ fixed }) {
                                 <p className='font-bold'>K-TOWER</p>
                             </a>
                         </div>
-                        <button className='cursor-pointer p-1 flex  flex-col items-center justify-center hover:bg-gray-200 hover:font-bold text-black hover:rounded-xl active:bg-gray-200'>
+                        <a href='/home' className='cursor-pointer p-1 flex  flex-col items-center justify-center hover:bg-gray-200 hover:font-bold text-black hover:rounded-xl active:bg-gray-200'>
                             <p className=' f'>Home</p>
-                        </button>
-                        <button className='cursor-pointer p-1 flex  flex-col items-center justify-center hover:bg-gray-200 hover:font-bold text-black hover:rounded-xl active:bg-gray-200'>
+                        </a>
+                        <a href='#about' className='cursor-pointer p-1 flex  flex-col items-center justify-center hover:bg-gray-200 hover:font-bold text-black hover:rounded-xl active:bg-gray-200'>
                             <p className=' f'>About</p>
-                        </button>
-                        <Link to='/rent'>
-                            <button className='cursor-pointer p-1 items-center justify-center hover:bg-gray-200 hover:font-bold text-black hover:rounded-xl '>
-                                <p className=' '>Rent Interior</p>
-                            </button>
-                        </Link>
-                        <Link to='/report'>
-                            <button className='cursor-pointer p-1 flex  items-center justify-center hover:bg-gray-200 hover:font-bold text-black hover:rounded-xl '>
-                                <p className=' '>Report Problem</p>
-                            </button>
-                        </Link>
-                        <button className='cursor-pointer p-1 flex items-center justify-center hover:bg-gray-200 hover:font-bold text-black hover:rounded-xl '>
+                        </a>
+                        <a href='/rent' className='cursor-pointer p-1 items-center justify-center hover:bg-gray-200 hover:font-bold text-black hover:rounded-xl '>
+                            <p className=' '>Rent Interior</p>
+                        </a>
+                        <a href='/report' className='cursor-pointer p-1 flex  items-center justify-center hover:bg-gray-200 hover:font-bold text-black hover:rounded-xl '>
+                            <p className=' '>Report Problem</p>
+                        </a>
+                        <a href='/blog' className='cursor-pointer p-1 flex items-center justify-center hover:bg-gray-200 hover:font-bold text-black hover:rounded-xl '>
                             <p className=' '>Blog</p>
-                        </button>
-                        <Link to='/contact'>
-                            <button className='cursor-pointer p-1 flex items-center justify-center hover:bg-gray-200 hover:font-bold text-black hover:rounded-xl '>
-                                <p className=' '>Contact</p>
-                            </button>
-                        </Link>
+                        </a>
+                        <a href='/contact' className='cursor-pointer p-1 flex items-center justify-center hover:bg-gray-200 hover:font-bold text-black hover:rounded-xl '>
+                            <p className=' '>Contact</p>
+                        </a>
                         <div className='flex text-gray-400'>
                             <input placeholder='Search...' className='w-[300px] h-10 px-4 py-5 bg-transparent border-2  border-gray-300 placeholder:text-gray-400 relative rounded-3xl outline-none' />
                             <AiOutlineSearch className='mt-4 absolute ml-[270px]' />
                         </div>
-                        <Link to='/chat'>
-                            <button className='text-[30px] flex relative'>
-                                <AiFillMessage className='' />
+                        <a href='/chat' className='text-[30px] flex relative'>
+                            <AiFillMessage className='' />
+                            <span className='ml-[15px] w-[15px] text-[15px] h-[15px] bg-red-600 rounded-xl items-center justify-center flex text-white absolute'>1</span>
+                        </a>
+                        <div className='relative items-center justify-between block z-[9999]'>
+                            <button onClick={() => setopenNoti((prev) => !prev)} className='text-[30px] flex relative'>
+                                <GrNotification className='' />
                                 <span className='ml-[15px] w-[15px] text-[15px] h-[15px] bg-red-600 rounded-xl items-center justify-center flex text-white absolute'>1</span>
                             </button>
-                        </Link>
-                        <Link>
-                            <div className='relative items-center justify-between block z-[9999]'>
-                                <button onClick={() => setopenNoti((prev) => !prev)} className='text-[30px] flex relative'>
-                                    <GrNotification className='' />
-                                    <span className='ml-[15px] w-[15px] text-[15px] h-[15px] bg-red-600 rounded-xl items-center justify-center flex text-white absolute'>1</span>
-                                </button>
-                                {openNoti && <div className='w-[360px] fixed bg-white right-1 mr-3 mt-2 pt-2 flex-col items-center rounded-lg border-solid border-2 border-gray-500'>
-                                    {
-                                        <div className='py-3 px-2 max-h-[630px] overflow-y-scroll'>
-                                            <span className='font-bold text-[22px] pb-3'>Notifications</span>
-                                            <div className='justify-center items-center flex flex-col '>
-                                                <a href="#" class=" w-full p-3 cursor-pointer block hover:bg-gray-200 dark:hover:bg-gray-100 dark:hover:text-white">
-                                                    <div className='flex items-center justify-center space-x-1'>
-                                                        <img src={images.user} className='h-10 w-10 rounded-full' />
-                                                        <div className='flex flex-col'>
-                                                            <div className='flex text-[17px] space-x-1'>
-                                                                <p className='font-bold '>ADMIN</p>
-                                                                <p>has a new post.</p>
-                                                            </div>
-                                                            <div>
-                                                                <p className='text-[blue] font-bold text-[12px]'>3 hours ago</p>
-                                                            </div>
+                            {openNoti && <div className='w-[360px] fixed bg-white right-1 mr-3 mt-2 pt-2 flex-col items-center rounded-lg border-solid border-2 border-gray-500'>
+                                {
+                                    <div className='py-3 px-2 max-h-[630px] overflow-y-scroll'>
+                                        <span className='font-bold text-[22px] pb-3'>Notifications</span>
+                                        <div className='justify-center items-center flex flex-col '>
+                                            <a href="#" class=" w-full p-3 cursor-pointer block hover:bg-gray-200 dark:hover:bg-gray-100 dark:hover:text-white">
+                                                <div className='flex items-center justify-center space-x-1'>
+                                                    <img src={images.user} className='h-10 w-10 rounded-full' />
+                                                    <div className='flex flex-col'>
+                                                        <div className='flex text-[17px] space-x-1'>
+                                                            <p className='font-bold '>ADMIN</p>
+                                                            <p>has a new post.</p>
+                                                        </div>
+                                                        <div>
+                                                            <p className='text-[blue] font-bold text-[12px]'>3 hours ago</p>
                                                         </div>
                                                     </div>
-                                                </a>
-                                                <a href="#" class=" w-full p-3 cursor-pointer block hover:bg-gray-200 dark:hover:bg-gray-100 dark:hover:text-white">
-                                                    <div className='flex items-center justify-center space-x-1'>
-                                                        <img src={images.user} className='h-10 w-10 rounded-full' />
-                                                        <div className='flex flex-col'>
-                                                            <div className='flex text-[17px] space-x-1'>
-                                                                <p className='font-bold '>ADMIN</p>
-                                                                <p>has a new post.</p>
-                                                            </div>
-                                                            <div>
-                                                                <p className='text-[blue] font-bold text-[12px]'>3 hours ago</p>
-                                                            </div>
+                                                </div>
+                                            </a>
+                                            <a href="#" class=" w-full p-3 cursor-pointer block hover:bg-gray-200 dark:hover:bg-gray-100 dark:hover:text-white">
+                                                <div className='flex items-center justify-center space-x-1'>
+                                                    <img src={images.user} className='h-10 w-10 rounded-full' />
+                                                    <div className='flex flex-col'>
+                                                        <div className='flex text-[17px] space-x-1'>
+                                                            <p className='font-bold '>ADMIN</p>
+                                                            <p>has a new post.</p>
+                                                        </div>
+                                                        <div>
+                                                            <p className='text-[blue] font-bold text-[12px]'>3 hours ago</p>
                                                         </div>
                                                     </div>
-                                                </a>
-                                                <a href="#" class=" w-full p-3 cursor-pointer block hover:bg-gray-200 dark:hover:bg-gray-100 dark:hover:text-white">
-                                                    <div className='flex items-center justify-center space-x-1'>
-                                                        <img src={images.user} className='h-10 w-10 rounded-full' />
-                                                        <div className='flex flex-col'>
-                                                            <div className='flex text-[17px] space-x-1'>
-                                                                <p className='font-bold '>ADMIN</p>
-                                                                <p>has a new post.</p>
-                                                            </div>
-                                                            <div>
-                                                                <p className='text-[blue] font-bold text-[12px]'>3 hours ago</p>
-                                                            </div>
+                                                </div>
+                                            </a>
+                                            <a href="#" class=" w-full p-3 cursor-pointer block hover:bg-gray-200 dark:hover:bg-gray-100 dark:hover:text-white">
+                                                <div className='flex items-center justify-center space-x-1'>
+                                                    <img src={images.user} className='h-10 w-10 rounded-full' />
+                                                    <div className='flex flex-col'>
+                                                        <div className='flex text-[17px] space-x-1'>
+                                                            <p className='font-bold '>ADMIN</p>
+                                                            <p>has a new post.</p>
+                                                        </div>
+                                                        <div>
+                                                            <p className='text-[blue] font-bold text-[12px]'>3 hours ago</p>
                                                         </div>
                                                     </div>
-                                                </a>
-                                                <a href="#" class=" w-full p-3 cursor-pointer block hover:bg-gray-200 dark:hover:bg-gray-100 dark:hover:text-white">
-                                                    <div className='flex items-center justify-center space-x-1'>
-                                                        <img src={images.user} className='h-10 w-10 rounded-full' />
-                                                        <div className='flex flex-col'>
-                                                            <div className='flex text-[17px] space-x-1'>
-                                                                <p className='font-bold '>ADMIN</p>
-                                                                <p>has a new post.</p>
-                                                            </div>
-                                                            <div>
-                                                                <p className='text-[blue] font-bold text-[12px]'>3 hours ago</p>
-                                                            </div>
+                                                </div>
+                                            </a>
+                                            <a href="#" class=" w-full p-3 cursor-pointer block hover:bg-gray-200 dark:hover:bg-gray-100 dark:hover:text-white">
+                                                <div className='flex items-center justify-center space-x-1'>
+                                                    <img src={images.user} className='h-10 w-10 rounded-full' />
+                                                    <div className='flex flex-col'>
+                                                        <div className='flex text-[17px] space-x-1'>
+                                                            <p className='font-bold '>ADMIN</p>
+                                                            <p>has a new post.</p>
+                                                        </div>
+                                                        <div>
+                                                            <p className='text-[blue] font-bold text-[12px]'>3 hours ago</p>
                                                         </div>
                                                     </div>
-                                                </a>
-                                                <a href="#" class=" w-full p-3 cursor-pointer block hover:bg-gray-200 dark:hover:bg-gray-100 dark:hover:text-white">
-                                                    <div className='flex items-center justify-center space-x-1'>
-                                                        <img src={images.user} className='h-10 w-10 rounded-full' />
-                                                        <div className='flex flex-col'>
-                                                            <div className='flex text-[17px] space-x-1'>
-                                                                <p className='font-bold '>ADMIN</p>
-                                                                <p>has a new post.</p>
-                                                            </div>
-                                                            <div>
-                                                                <p className='text-[blue] font-bold text-[12px]'>3 hours ago</p>
-                                                            </div>
+                                                </div>
+                                            </a>
+                                            <a href="#" class=" w-full p-3 cursor-pointer block hover:bg-gray-200 dark:hover:bg-gray-100 dark:hover:text-white">
+                                                <div className='flex items-center justify-center space-x-1'>
+                                                    <img src={images.user} className='h-10 w-10 rounded-full' />
+                                                    <div className='flex flex-col'>
+                                                        <div className='flex text-[17px] space-x-1'>
+                                                            <p className='font-bold '>ADMIN</p>
+                                                            <p>has a new post.</p>
+                                                        </div>
+                                                        <div>
+                                                            <p className='text-[blue] font-bold text-[12px]'>3 hours ago</p>
                                                         </div>
                                                     </div>
-                                                </a>
-                                            </div>
+                                                </div>
+                                            </a>
                                         </div>
-                                    }
-                                </div>}
-                            </div>
-                        </Link>
+                                    </div>
+                                }
+                            </div>}
+                        </div>
                         <div className='relative items-center justify-between block z-[9999]'>
                             <button onClick={() => setopenBill((prev) => !prev)} className='text-[30px] flex relative'>
                                 <RiBillLine className='' />

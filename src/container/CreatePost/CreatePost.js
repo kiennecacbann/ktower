@@ -4,8 +4,8 @@ import { AiFillExclamationCircle, AiFillFileImage } from 'react-icons/ai'
 import { MdOutlineHomeRepairService } from 'react-icons/md'
 const CreatePost = () => {
     return (
-        <div className='w-screen sm:w-full'>
-            <div className=' w-[590px] my-4 bg-[#242526] max-w-[25rem] sm:max-w-[40rem] rounded-[.5rem] '>
+        <div className='w-screen sm:w-full px-[400px]'>
+            <div className=' w-full my-4 bg-[#242526] rounded-[.5rem] '>
                 <div className='mt-8 flex items-center w-full p-3 pt-4'>
                     <div className='w-14 h-14 shrink-0 flex'>
                         <img src={images.user} className='rounded-full' />

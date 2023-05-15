@@ -15,6 +15,7 @@ import Profile from './components/Profile/Profile';
 import Bill from './container/Bill/Bill';
 import ForgotPassword from './container/Forgot Password/ForgotPassword';
 import Contact from './components/Contact/Contact';
+import Blog from './container/Blog/Blog';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
@@ -33,6 +34,8 @@ root.render(
         <Route path="fgpw" element={<ForgotPassword />} />
         <Route path="contact" element={<Contact />} />
         <Route path="bill" element={<Bill />} />
+        <Route path="blog" element={<Blog />} />
+
       </Routes>
     </BrowserRouter>
   </React.StrictMode>

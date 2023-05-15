@@ -13,9 +13,12 @@
     @apply border border-slate-400
   }
 
-  
+  html{
+    @apply scroll-smooth
+  }
 }
 body {
+
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', 'Sigmar','Poppins'
