@@ -2,6 +2,7 @@ import React from 'react';
 import { AiOutlineMail, AiFillFacebook, AiFillGithub, AiFillInstagram } from 'react-icons/ai';
 import images from '../../constants/images';
 import { MdWifiCalling3 } from 'react-icons/md'
+import { Link } from 'react-router-dom';
 const Footer = () => {
     return (
 
@@ -40,14 +41,18 @@ const Footer = () => {
                         <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Legal</h2>
                         <ul class="text-gray-500 dark:text-gray-400 font-medium">
                             <li class="mb-4">
-                                <a href="/home" class="hover:underline">Home</a>
+                                <a href='#' class="hover:underline">Home</a>
                             </li>
-                            <li class="mb-4">
-                                <a href="/rent" class="hover:underline">Rent Interior</a>
-                            </li>
-                            <li class="mb-4">
-                                <a href="/blog" class="hover:underline">Blog</a>
-                            </li>
+                            <Link to='/rent'>
+                                <li class="mb-4">
+                                    <a class="hover:underline">Rent Interior</a>
+                                </li>
+                            </Link>
+                            <Link to='/blog'>
+                                <li class="mb-4">
+                                    <a class="hover:underline">Blog</a>
+                                </li>
+                            </Link>
                         </ul>
                     </div>
                     <div>
@@ -56,12 +61,16 @@ const Footer = () => {
                             <li class="mb-4">
                                 <a href="#about" class=" hover:underline">About</a>
                             </li>
-                            <li class="mb-4">
-                                <a href="/report" class="hover:underline">Report</a>
-                            </li>
-                            <li class="mb-4">
-                                <a href="/contact" class="hover:underline">Contact</a>
-                            </li>
+                            <Link to='/report'>
+                                <li class="mb-4">
+                                    <a class="hover:underline">Report</a>
+                                </li>
+                            </Link>
+                            <Link to='/contact'>
+                                <li class="mb-4">
+                                    <a class="hover:underline">Contact</a>
+                                </li>
+                            </Link>
                         </ul>
                     </div>
                     <div>
@@ -73,7 +82,7 @@ const Footer = () => {
                             </li>
                             <li class="mb-4 flex items-center space-x-1">
                                 <AiFillFacebook className='mt-1' />
-                                <a href="https://www.facebook.com/kiennecacban" target="_blank" > Facebook</a>
+                                <a href="https://www.facebook.com/kiennecacban" target="_blank" class="hover:underline" > Facebook</a>
                             </li>
                             <li class="mb-4 flex items-center space-x-1">
                                 <AiFillInstagram className='mt-1' />
@@ -82,7 +91,7 @@ const Footer = () => {
                         </ul>
                     </div>
                     <div>
-                </div>
+                    </div>
                 </div>
             </div>
             <div class="bg-[#25223c] dark:bg-gray-700 flex justify-center py-7">

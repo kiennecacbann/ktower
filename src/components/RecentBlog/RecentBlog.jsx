@@ -19,10 +19,10 @@ const RecentBlog = () => {
                         <p>By Admin</p>
                     </div>
                 </div>
-                <div className='max-w-[450px] max-h-[470px] cursor-pointer'>
+                <div className='max-w-[450px] max-h-[470px] cursor-pointer gird grid-cols-3'>
                     <div className='flex'>
                         <img src={images.user} className='w-full max-h-[320px] rounded-t-xl relative' />
-                        <span className='bg-[#ff5857] ml-[260px] mt-[276px] absolute rounded-t-lg p-3 text-white bold uppercase font-semibold text-[13px]'>20 may, 2023</span>
+                        <span className='bg-[#ff5857] ml-[260px] mt-[276px] absolute block rounded-t-lg p-3 text-white bold uppercase font-semibold text-[13px]'>20 may, 2023</span>
                     </div>
                     <div className='px-5 py-5'>
                         <a className='text-[20px] leading-7 font-bold text-black'>Did you hurt yourself when you fell from the heaven</a>
