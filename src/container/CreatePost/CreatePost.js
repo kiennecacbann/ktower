@@ -1,38 +1,46 @@
-import React from 'react'
-import images from '../../constants/images'
-import { AiFillExclamationCircle, AiFillFileImage } from 'react-icons/ai'
-import { MdOutlineHomeRepairService } from 'react-icons/md'
-const CreatePost = () => {
-    return (
-        <div className='w-screen sm:w-full px-[400px]'>
-            <div className=' w-full my-4 bg-[#242526] rounded-[.5rem] '>
-                <div className='mt-8 flex items-center w-full p-3 pt-4'>
-                    <div className='w-14 h-14 shrink-0 flex'>
-                        <img src={images.user} className='rounded-full' />
-                    </div>
-                    <div className='flex items-center mx-3 w-full'>
-                        <input type="text" placeholder="What's on your mind Kien?"
-                            className='text-white outline-0 bg-[#3a3b3c] p-2 pl-3 rounded-full w-full h-12 hover:bg-[#444444]'>
-                        </input>
-                    </div>
-                    <div className='flex items-center bg-blue-500 px-3 rounded-full h-10'>
-                        <button className='font-bold text-white'>Post</button>
-                    </div>
-                </div>
-                <div className='border-b-[1px] border-solid my-2 mx-2 opacity-10'>
+import React, { useState } from 'react';
+import Header from '../../components/Header/Header';
+import Footer from '../../components/Footer/Footer';
+import ReactQuill from 'react-quill';
+import 'react-quill/dist/quill.snow.css';
 
+const modules = {
+
+    toolbar: [
+        [{ header: [1, 2, 3, 4, 5, 6, false] }],
+        [{ font: [] }],
+        [{ size: [] }],
+        ["bold", "italic", "underline", "strike", "blockquote", "link", "image", "video"],
+        [
+            { list: "ordered" },
+            { list: "bullet" },
+            { indent: "-1" },
+            { indent: "+1" },
+        ],
+    ],
+};
+const CreatePost = () => {
+    const [value, setValue] = useState("");
+    return (
+        <div className='relative px-14 h-screen'>
+            <div className='flex flex-row justify-center h-full w-full items-center'>
+                <div className='relative h-full w-[60%] flex flex-col overflow-scroll'>
+                    <div className=''>
+                        <input placeholder='Tittle' className='w-full h-[100px] placeholder:text-[35px] outline-none placeholder:font-bold' />
+                    </div>
+                    <ReactQuill className='h-auto w-[100%]'
+                        theme="snow"
+                        value={value}
+                        onChange={setValue}
+                        modules={modules}
+                    />
                 </div>
-                <div className='items-center px-3 sm:mx-9 py-1'>
-                    <label htmlFor='file' className='flex items-center justify-center px-6 py-1 hover:bg-[#3a3b3c] hover:rounded-full cursor-pointer'>
-                        <div className='w-7 h-9'>
-                            <input id='file' type='file' className='hidden' />
-                            <AiFillFileImage className='w-8 h-8 text-[#3366CC]' />
-                        </div>
-                        <p className='pl-1 text-[14px] ml-2 font-bold text-[#a5a8ac]'>Photo/video</p>
-                    </label>
+                <div className='relative h-full w-[50%] flex flex-col border-l border-solid border-black p-[10px] overflow-scroll pt-[150px]'
+                    dangerouslySetInnerHTML={{ __html: value }}>
                 </div>
             </div>
         </div>
+
     )
 }
 

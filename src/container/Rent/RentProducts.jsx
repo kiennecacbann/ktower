@@ -3,9 +3,58 @@ import images from '../../constants/images'
 import { AiOutlineSearch, AiFillCaretDown, AiOutlineShoppingCart, AiOutlineHistory, AiFillHome, AiOutlineThunderbolt } from 'react-icons/ai'
 import { Select } from 'antd'
 import { Link } from 'react-router-dom'
+import Footer from '../../components/Footer/Footer'
 const RentProducts = () => {
     const [openHistory, setopenHistory] = useState(false);
+    const categoryButtons = document.querySelectorAll('.category-btn');
 
+    // Get all products
+    const products = document.querySelectorAll('.product');
+
+    // Add click event listener to each category button
+    categoryButtons.forEach((button) => {
+        button.addEventListener('click', () => {
+            const category = button.dataset.category;
+
+            // Show all products if "All" button is clicked
+            if (category === 'all') {
+                products.forEach((product) => {
+                    product.style.display = 'block';
+                });
+            } else {
+                // Hide products not matching the selected category
+                products.forEach((product) => {
+                    const productCategory = product.dataset.category;
+                    product.style.display = productCategory === category ? 'block' : 'none';
+                });
+            }
+        });
+    });
+/** 
+    const productsContainer = document.getElementById('products');
+    const sortButton = document.getElementById('sortbyname');
+
+    // Add click event listener to the sort button
+    sortButton.addEventListener('click', () => {
+        // Convert the NodeList to an array
+        const productsArray = Array.from(productsContainer.children);
+
+        // Sort the array of products by their inner text (name)
+        const sortedProducts = productsArray.sort((a, b) => {
+            const nameA = a.innerText.toLowerCase();
+            const nameB = b.innerText.toLowerCase();
+            if (nameA < nameB) return -1;
+            if (nameA > nameB) return 1;
+            return 0;
+        });
+
+        // Clear the products container
+        productsContainer.innerHTML = '';
+        // Append the sorted products back to the container
+        sortedProducts.forEach((product) => {
+            productsContainer.appendChild(product);
+        });
+    });*/
     return (
         <div className='bg-white'>
             <div className='flex justify-between items-center px-[100px]'>
@@ -63,51 +112,271 @@ const RentProducts = () => {
                 </div>
             </div>
             <div className='px-[100px] flex'>
-                <div className='sm:block flex flex-col max-w-[200px] '>
+                <div id='category-buttons' className='sm:block flex flex-col max-w-[200px]  '>
                     <Link to='/home'>
                         <div className='bg-[#d5d1ce] p-3 w-[200px] rounded-lg mb-5 font-bold italic cursor-pointer hover:bg-[#FFCCFF] '>
                             <span className='flex items-center justify-between'>HOME <AiFillHome /></span>
                         </div>
                     </Link>
-                    <div className='bg-[#d5d1ce] py-5 px-3 w-[200px] rounded-lg font-bold italic cursor-pointer hover:bg-[#FFCCFF]'>
-                        <span className='flex items-center justify-between'>NEW IN <AiOutlineThunderbolt /></span>
-                    </div>
-                    <div className='bg-[#d5d1ce] px-3 w-[200px] rounded-lg mt-5 font-bold italic cursor-pointer hover:bg-[#FFCCFF]'>
+                    <button data-category='all' className='category-btn bg-[#d5d1ce] py-5 px-3 w-[200px] rounded-lg font-bold italic cursor-pointer hover:bg-[#FFCCFF]'>
+                        <span className='flex items-center justify-between'>ALL<AiOutlineThunderbolt /></span>
+                    </button>
+                    <button data-category='table' className='category-btn bg-[#d5d1ce] px-3 w-[200px] rounded-lg mt-5 font-bold italic cursor-pointer hover:bg-[#FFCCFF]'>
                         <span className='flex items-center justify-between'>TABLES
                             <img src={images.table} className='h-16 w-16' />
                         </span>
-                    </div>
-                    <div className='bg-[#d5d1ce] px-3 w-[200px] rounded-lg mt-5 font-bold italic cursor-pointer hover:bg-[#FFCCFF]'>
+                    </button>
+                    <button data-category='chair' className='category-btn bg-[#d5d1ce] px-3 w-[200px] rounded-lg mt-5 font-bold italic cursor-pointer hover:bg-[#FFCCFF]'>
                         <span className='flex items-center justify-between'>CHAIRS
                             <img src={images.chair} className='h-16 w-16' />
                         </span>
-                    </div>
-                    <div className='bg-[#d5d1ce] px-3 w-[200px] rounded-lg mt-5 font-bold italic cursor-pointer hover:bg-[#FFCCFF]'>
+                    </button>
+                    <button data-category='sofa' className='category-btn bg-[#d5d1ce] px-3 w-[200px] rounded-lg mt-5 font-bold italic cursor-pointer hover:bg-[#FFCCFF]'>
                         <span className='flex items-center justify-between'>SOFAS
                             <img src={images.sofa} className='h-16 w-16' />
                         </span>
-                    </div>
-                    <div className='bg-[#d5d1ce] px-3 w-[200px] rounded-lg mt-5 font-bold italic cursor-pointer hover:bg-[#FFCCFF]'>
+                    </button>
+                    <button data-category='houseware' className='category-btn bg-[#d5d1ce] px-3 w-[200px] rounded-lg mt-5 font-bold italic cursor-pointer hover:bg-[#FFCCFF]'>
                         <span className='flex items-center justify-between'>HOUSEWARES
                             <img src={images.houseware} className='h-16 w-16' />
                         </span>
-                    </div>
+                    </button>
                 </div>
                 <div className='pl-20 pt-0'>
-                    <div className='mb-5'>
-                        <h2 className='items-center text-[36px] text-white font-bold italic '>SOFAS</h2>
-                    </div>
                     <div className='text-black h-5 w-16 mb-10  '>
                         <select className='cursor-pointer flex justify-between items-center p-1 border-2 border-[black] rounded-lg outline-none font-bold'>Sort<AiFillCaretDown />
                             <option>Featured</option>
-                            <option><button>Sort by Name</button></option>
+                            <option><button id='sortbyname'>Sort by Name</button></option>
                             <option><button>Sort by Price: Low to High</button></option>
                             <option><button>Sort by Price: High to Low</button></option>
                         </select>
                     </div>
-                    <div className=' '>
-                        <div className='relative flex flex-wrap justify-between text-black font-bold'>
-                            <Link to='/detail'>
+                    <div id='products'>
+                        <div className='product' data-category='table'>
+                            <div className='mb-5'>
+                                <h2 className='items-center text-[36px] text-black font-bold italic '>TABLES</h2>
+                            </div>
+                            <div className='relative flex flex-wrap justify-between text-black font-bold'>
+                                <Link to='/detail'>
+                                    <div className='max-w-[240px] max-h-[500px] mb-10 text-center'>
+                                        <img src={images.table} className='h-[300px] rounded-3xl hover:scale-[1.2]' />
+                                        <div className='flex justify-between pt-1'>
+                                            <p className=''>TABLE</p>
+                                            <span className=''>25$</span>
+                                        </div>
+                                        <div className='justify-between flex px-1 text-[15px] mt-5'>
+                                            <button type="button" class="w-full text-white bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 shadow-lg shadow-blue-500/50 dark:shadow-lg dark:shadow-blue-800/80 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 ">RENT</button>
+                                        </div>
+                                    </div>
+                                </Link>
+                                <Link to='/detail'>
+                                    <div className='max-w-[240px] max-h-[500px] mb-10 text-center'>
+                                        <img src={images.table} className='h-[300px] rounded-3xl hover:scale-[1.2]' />
+                                        <div className='flex justify-between pt-1'>
+                                            <p className=''>TABLE</p>
+                                            <span className=''>25$</span>
+                                        </div>
+                                        <div className='justify-between flex px-1 text-[15px] mt-5'>
+                                            <button type="button" class="w-full text-white bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 shadow-lg shadow-blue-500/50 dark:shadow-lg dark:shadow-blue-800/80 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 ">RENT</button>
+                                        </div>
+                                    </div>
+                                </Link>
+                                <Link to='/detail'>
+                                    <div className='max-w-[240px] max-h-[500px] mb-10 text-center'>
+                                        <img src={images.table} className='h-[300px] rounded-3xl hover:scale-[1.2]' />
+                                        <div className='flex justify-between pt-1'>
+                                            <p className=''>TABLE</p>
+                                            <span className=''>25$</span>
+                                        </div>
+                                        <div className='justify-between flex px-1 text-[15px] mt-5'>
+                                            <button type="button" class="w-full text-white bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 shadow-lg shadow-blue-500/50 dark:shadow-lg dark:shadow-blue-800/80 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 ">RENT</button>
+                                        </div>
+                                    </div>
+                                </Link>
+                                <Link to='/detail'>
+                                    <div className='max-w-[240px] max-h-[500px] mb-10 text-center'>
+                                        <img src={images.table} className='h-[300px] rounded-3xl hover:scale-[1.2]' />
+                                        <div className='flex justify-between pt-1'>
+                                            <p className=''>TABLE</p>
+                                            <span className=''>25$</span>
+                                        </div>
+                                        <div className='justify-between flex px-1 text-[15px] mt-5'>
+                                            <button type="button" class="w-full text-white bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 shadow-lg shadow-blue-500/50 dark:shadow-lg dark:shadow-blue-800/80 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 ">RENT</button>
+                                        </div>
+                                    </div>
+                                </Link>
+                                <Link to='/detail'>
+                                    <div className='max-w-[240px] max-h-[500px] mb-10 text-center'>
+                                        <img src={images.table} className='h-[300px] rounded-3xl hover:scale-[1.2]' />
+                                        <div className='flex justify-between pt-1'>
+                                            <p className=''>TABLE</p>
+                                            <span className=''>25$</span>
+                                        </div>
+                                        <div className='justify-between flex px-1 text-[15px] mt-5'>
+                                            <button type="button" class="w-full text-white bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 shadow-lg shadow-blue-500/50 dark:shadow-lg dark:shadow-blue-800/80 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 ">RENT</button>
+                                        </div>
+                                    </div>
+                                </Link>
+                                <Link to='/detail'>
+                                    <div className='max-w-[240px] max-h-[500px] mb-10 text-center'>
+                                        <img src={images.table} className='h-[300px] rounded-3xl hover:scale-[1.2]' />
+                                        <div className='flex justify-between pt-1'>
+                                            <p className=''>TABLE</p>
+                                            <span className=''>25$</span>
+                                        </div>
+                                        <div className='justify-between flex px-1 text-[15px] mt-5'>
+                                            <button type="button" class="w-full text-white bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 shadow-lg shadow-blue-500/50 dark:shadow-lg dark:shadow-blue-800/80 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 ">RENT</button>
+                                        </div>
+                                    </div>
+                                </Link>
+                                <Link to='/detail'>
+                                    <div className='max-w-[240px] max-h-[500px] mb
+                                -10 text-center'>
+                                        <img src={images.table} className='h-[300px] rounded-3xl hover:scale-[1.2]' />
+                                        <div className='flex justify-between pt-1'>
+                                            <p className=''>TABLE</p>
+                                            <span className=''>25$</span>
+                                        </div>
+                                        <div className='justify-between flex px-1 text-[15px] mt-5'>
+                                            <button type="button" class="w-full text-white bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 shadow-lg shadow-blue-500/50 dark:shadow-lg dark:shadow-blue-800/80 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 ">RENT</button>
+                                        </div>
+                                    </div>
+                                </Link>
+                                <Link to='/detail'>
+                                    <div className='max-w-[240px] max-h-[500px] mb-10 text-center'>
+                                        <img src={images.table} className='h-[300px] rounded-3xl hover:scale-[1.2]' />
+                                        <div className='flex justify-between pt-1'>
+                                            <p className=''>TABLE</p>
+                                            <span className=''>25$</span>
+                                        </div>
+                                        <div className='justify-between flex px-1 text-[15px] mt-5'>
+                                            <button type="button" class="w-full text-white bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 shadow-lg shadow-blue-500/50 dark:shadow-lg dark:shadow-blue-800/80 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 ">RENT</button>
+                                        </div>
+                                    </div>
+                                </Link>
+                            </div>
+                        </div>
+                        <div className='product' data-category='chair'>
+                            <div className='mb-5'>
+                                <h2 className='items-center text-[36px] text-black font-bold italic '>CHAIRS</h2>
+                            </div>
+                            <div className='relative flex flex-wrap justify-between text-black font-bold'>
+                                <Link to='/detail'>
+                                    <div className='max-w-[240px] max-h-[500px] mb-10 text-center'>
+                                        <img src={images.chair} className='h-[300px] rounded-3xl hover:scale-[1.2]' />
+                                        <div className='flex justify-between pt-1'>
+                                            <p className=''>CHAIR</p>
+                                            <span className=''>5$</span>
+                                        </div>
+                                        <div className='justify-between flex px-1 text-[15px] mt-5'>
+                                            <button type="button" class="w-full text-white bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 shadow-lg shadow-blue-500/50 dark:shadow-lg dark:shadow-blue-800/80 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 ">RENT</button>
+                                        </div>
+                                    </div>
+                                </Link>
+                                <Link to='/detail'>
+                                    <div className='max-w-[240px] max-h-[500px] mb-10 text-center'>
+                                        <img src={images.chair} className='h-[300px] rounded-3xl hover:scale-[1.2]' />
+                                        <div className='flex justify-between pt-1'>
+                                            <p className=''>CHAIR</p>
+                                            <span className=''>5$</span>
+                                        </div>
+                                        <div className='justify-between flex px-1 text-[15px] mt-5'>
+                                            <button type="button" class="w-full text-white bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 shadow-lg shadow-blue-500/50 dark:shadow-lg dark:shadow-blue-800/80 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 ">RENT</button>
+                                        </div>
+                                    </div>
+                                </Link>
+                                <Link to='/detail'>
+                                    <div className='max-w-[240px] max-h-[500px] mb-10 text-center'>
+                                        <img src={images.chair} className='h-[300px] rounded-3xl hover:scale-[1.2]' />
+                                        <div className='flex justify-between pt-1'>
+                                            <p className=''>CHAIR</p>
+                                            <span className=''>5$</span>
+                                        </div>
+                                        <div className='justify-between flex px-1 text-[15px] mt-5'>
+                                            <button type="button" class="w-full text-white bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 shadow-lg shadow-blue-500/50 dark:shadow-lg dark:shadow-blue-800/80 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 ">RENT</button>
+                                        </div>
+                                    </div>
+                                </Link>
+                                <Link to='/detail'>
+                                    <div className='max-w-[240px] max-h-[500px] mb-10 text-center'>
+                                        <img src={images.chair} className='h-[300px] rounded-3xl hover:scale-[1.2]' />
+                                        <div className='flex justify-between pt-1'>
+                                            <p className=''>CHAIR</p>
+                                            <span className=''>5$</span>
+                                        </div>
+                                        <div className='justify-between flex px-1 text-[15px] mt-5'>
+                                            <button type="button" class="w-full text-white bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 shadow-lg shadow-blue-500/50 dark:shadow-lg dark:shadow-blue-800/80 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 ">RENT</button>
+                                        </div>
+                                    </div>
+                                </Link>
+                                <Link to='/detail'>
+                                    <div className='max-w-[240px] max-h-[500px] mb-10 text-center'>
+                                        <img src={images.chair} className='h-[300px] rounded-3xl hover:scale-[1.2]' />
+                                        <div className='flex justify-between pt-1'>
+                                            <p className=''>CHAIR</p>
+                                            <span className=''>5$</span>
+                                        </div>
+                                        <div className='justify-between flex px-1 text-[15px] mt-5'>
+                                            <button type="button" class="w-full text-white bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 shadow-lg shadow-blue-500/50 dark:shadow-lg dark:shadow-blue-800/80 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 ">RENT</button>
+                                        </div>
+                                    </div>
+                                </Link>
+                                <Link to='/detail'>
+                                    <div className='max-w-[240px] max-h-[500px] mb-10 text-center'>
+                                        <img src={images.chair} className='h-[300px] rounded-3xl hover:scale-[1.2]' />
+                                        <div className='flex justify-between pt-1'>
+                                            <p className=''>CHAIR</p>
+                                            <span className=''>5$</span>
+                                        </div>
+                                        <div className='justify-between flex px-1 text-[15px] mt-5'>
+                                            <button type="button" class="w-full text-white bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 shadow-lg shadow-blue-500/50 dark:shadow-lg dark:shadow-blue-800/80 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 ">RENT</button>
+                                        </div>
+                                    </div>
+                                </Link>
+                                <Link to='/detail'>
+                                    <div className='max-w-[240px] max-h-[500px] mb-10 text-center'>
+                                        <img src={images.chair} className='h-[300px] rounded-3xl hover:scale-[1.2]' />
+                                        <div className='flex justify-between pt-1'>
+                                            <p className=''>CHAIR</p>
+                                            <span className=''>5$</span>
+                                        </div>
+                                        <div className='justify-between flex px-1 text-[15px] mt-5'>
+                                            <button type="button" class="w-full text-white bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 shadow-lg shadow-blue-500/50 dark:shadow-lg dark:shadow-blue-800/80 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 ">RENT</button>
+                                        </div>
+                                    </div>
+                                </Link>
+                                <Link to='/detail'>
+                                    <div className='max-w-[240px] max-h-[500px] mb-10 text-center'>
+                                        <img src={images.chair} className='h-[300px] rounded-3xl hover:scale-[1.2]' />
+                                        <div className='flex justify-between pt-1'>
+                                            <p className=''>CHAIR</p>
+                                            <span className=''>5$</span>
+                                        </div>
+                                        <div className='justify-between flex px-1 text-[15px] mt-5'>
+                                            <button type="button" class="w-full text-white bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 shadow-lg shadow-blue-500/50 dark:shadow-lg dark:shadow-blue-800/80 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 ">RENT</button>
+                                        </div>
+                                    </div>
+                                </Link>
+
+                            </div>
+                        </div>
+                        <div className='product' data-category='sofa'>
+                            <div className='mb-5'>
+                                <h2 className='items-center text-[36px] text-black font-bold italic '>SOFAS</h2>
+                            </div>
+                            <div className='relative flex flex-wrap justify-between text-black font-bold'>
+                                <Link to='/detail'>
+                                    <div className='max-w-[240px] max-h-[500px] mb-10 text-center'>
+                                        <img src={images.sofa} className='h-[300px] rounded-3xl hover:scale-[1.2]' />
+                                        <div className='flex justify-between pt-1'>
+                                            <p className=''>SOFA</p>
+                                            <span className=''>5$</span>
+                                        </div>
+                                        <div className='justify-between flex px-1 text-[15px] mt-5'>
+                                            <button type="button" class="w-full text-white bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 shadow-lg shadow-blue-500/50 dark:shadow-lg dark:shadow-blue-800/80 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 ">RENT</button>
+                                        </div>
+                                    </div>
+                                </Link>
                                 <div className='max-w-[240px] max-h-[500px] mb-10 text-center'>
                                     <img src={images.sofa} className='h-[300px] rounded-3xl hover:scale-[1.2]' />
                                     <div className='flex justify-between pt-1'>
@@ -118,81 +387,175 @@ const RentProducts = () => {
                                         <button type="button" class="w-full text-white bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 shadow-lg shadow-blue-500/50 dark:shadow-lg dark:shadow-blue-800/80 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 ">RENT</button>
                                     </div>
                                 </div>
-                            </Link>
-                            <div className='max-w-[240px] max-h-[500px] mb-10 text-center'>
-                                <img src={images.sofa} className='h-[300px] rounded-3xl hover:scale-[1.2]' />
-                                <div className='flex justify-between pt-1'>
-                                    <p className=''>SOFA</p>
-                                    <span className=''>5$</span>
+                                <div className='max-w-[240px] max-h-[500px] mb-10 text-center'>
+                                    <img src={images.sofa} className='h-[300px] rounded-3xl  hover:scale-[1.2]' />
+                                    <div className='flex justify-between pt-1'>
+                                        <p className=''>SOFA</p>
+                                        <span className=''>5$</span>
+                                    </div>
+                                    <div className='justify-between flex px-1 text-[15px] mt-5'>
+                                        <button type="button" class="w-full text-white bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 shadow-lg shadow-blue-500/50 dark:shadow-lg dark:shadow-blue-800/80 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 ">RENT</button>
+                                    </div>
                                 </div>
-                                <div className='justify-between flex px-1 text-[15px] mt-5'>
-                                    <button type="button" class="w-full text-white bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 shadow-lg shadow-blue-500/50 dark:shadow-lg dark:shadow-blue-800/80 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 ">RENT</button>
+                                <div className='max-w-[240px] max-h-[500px] mb-10 text-center'>
+                                    <img src={images.sofa} className='h-[300px] rounded-3xl  hover:scale-[1.2]' />
+                                    <div className='flex justify-between pt-1'>
+                                        <p className=''>SOFA</p>
+                                        <span className=''>5$</span>
+                                    </div>
+                                    <div className='justify-between flex px-1 text-[15px] mt-5'>
+                                        <button type="button" class="w-full text-white bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 shadow-lg shadow-blue-500/50 dark:shadow-lg dark:shadow-blue-800/80 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 ">RENT</button>
+                                    </div>
+                                </div>
+                                <div className='max-w-[240px] max-h-[500px] mb-10 text-center'>
+                                    <img src={images.sofa} className='h-[300px] rounded-3xl  hover:scale-[1.2]' />
+                                    <div className='flex justify-between pt-1'>
+                                        <p className=''>SOFA</p>
+                                        <span className=''>5$</span>
+                                    </div>
+                                    <div className='justify-between flex px-1 text-[15px] mt-5'>
+                                        <button type="button" class="w-full text-white bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 shadow-lg shadow-blue-500/50 dark:shadow-lg dark:shadow-blue-800/80 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 ">RENT</button>
+                                    </div>
+                                </div>
+                                <div className='max-w-[240px] max-h-[500px] mb-10 text-center'>
+                                    <img src={images.sofa} className='h-[300px] rounded-3xl  hover:scale-[1.2]' />
+                                    <div className='flex justify-between pt-1'>
+                                        <p className=''>SOFA</p>
+                                        <span className=''>5$</span>
+                                    </div>
+                                    <div className='justify-between flex px-1 text-[15px] mt-5'>
+                                        <button type="button" class="w-full text-white bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 shadow-lg shadow-blue-500/50 dark:shadow-lg dark:shadow-blue-800/80 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 ">RENT</button>
+                                    </div>
+                                </div>
+                                <div className='max-w-[240px] max-h-[500px] mb-10 text-center'>
+                                    <img src={images.sofa} className='h-[300px] rounded-3xl  hover:scale-[1.2]' />
+                                    <div className='flex justify-between pt-1'>
+                                        <p className=''>SOFA</p>
+                                        <span className=''>5$</span>
+                                    </div>
+                                    <div className='justify-between flex px-1 text-[15px] mt-5'>
+                                        <button type="button" class="w-full text-white bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 shadow-lg shadow-blue-500/50 dark:shadow-lg dark:shadow-blue-800/80 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 ">RENT</button>
+                                    </div>
+                                </div>
+                                <div className='max-w-[240px] max-h-[500px] mb-10 text-center'>
+                                    <img src={images.sofa} className='h-[300px] rounded-3xl  hover:scale-[1.2]' />
+                                    <div className='flex justify-between pt-1'>
+                                        <p className=''>SOFA</p>
+                                        <span className=''>5$</span>
+                                    </div>
+                                    <div className='justify-between flex px-1 text-[15px] mt-5'>
+                                        <button type="button" class="w-full text-white bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 shadow-lg shadow-blue-500/50 dark:shadow-lg dark:shadow-blue-800/80 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 ">RENT</button>
+                                    </div>
                                 </div>
                             </div>
-                            <div className='max-w-[240px] max-h-[500px] mb-10 text-center'>
-                                <img src={images.sofa} className='h-[300px] rounded-3xl  hover:scale-[1.2]' />
-                                <div className='flex justify-between pt-1'>
-                                    <p className=''>SOFA</p>
-                                    <span className=''>5$</span>
-                                </div>
-                                <div className='justify-between flex px-1 text-[15px] mt-5'>
-                                    <button type="button" class="w-full text-white bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 shadow-lg shadow-blue-500/50 dark:shadow-lg dark:shadow-blue-800/80 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 ">RENT</button>
-                                </div>
+                        </div>
+                        <div className='product' data-category='houseware'>
+                            <div className='mb-5'>
+                                <h2 className='items-center text-[36px] text-black font-bold italic '>HOUSEWARES</h2>
                             </div>
-                            <div className='max-w-[240px] max-h-[500px] mb-10 text-center'>
-                                <img src={images.sofa} className='h-[300px] rounded-3xl  hover:scale-[1.2]' />
-                                <div className='flex justify-between pt-1'>
-                                    <p className=''>SOFA</p>
-                                    <span className=''>5$</span>
-                                </div>
-                                <div className='justify-between flex px-1 text-[15px] mt-5'>
-                                    <button type="button" class="w-full text-white bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 shadow-lg shadow-blue-500/50 dark:shadow-lg dark:shadow-blue-800/80 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 ">RENT</button>
-                                </div>
-                            </div>
-                            <div className='max-w-[240px] max-h-[500px] mb-10 text-center'>
-                                <img src={images.sofa} className='h-[300px] rounded-3xl  hover:scale-[1.2]' />
-                                <div className='flex justify-between pt-1'>
-                                    <p className=''>SOFA</p>
-                                    <span className=''>5$</span>
-                                </div>
-                                <div className='justify-between flex px-1 text-[15px] mt-5'>
-                                    <button type="button" class="w-full text-white bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 shadow-lg shadow-blue-500/50 dark:shadow-lg dark:shadow-blue-800/80 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 ">RENT</button>
-                                </div>
-                            </div>
-                            <div className='max-w-[240px] max-h-[500px] mb-10 text-center'>
-                                <img src={images.sofa} className='h-[300px] rounded-3xl  hover:scale-[1.2]' />
-                                <div className='flex justify-between pt-1'>
-                                    <p className=''>SOFA</p>
-                                    <span className=''>5$</span>
-                                </div>
-                                <div className='justify-between flex px-1 text-[15px] mt-5'>
-                                    <button type="button" class="w-full text-white bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 shadow-lg shadow-blue-500/50 dark:shadow-lg dark:shadow-blue-800/80 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 ">RENT</button>
-                                </div>
-                            </div>
-                            <div className='max-w-[240px] max-h-[500px] mb-10 text-center'>
-                                <img src={images.sofa} className='h-[300px] rounded-3xl  hover:scale-[1.2]' />
-                                <div className='flex justify-between pt-1'>
-                                    <p className=''>SOFA</p>
-                                    <span className=''>5$</span>
-                                </div>
-                                <div className='justify-between flex px-1 text-[15px] mt-5'>
-                                    <button type="button" class="w-full text-white bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 shadow-lg shadow-blue-500/50 dark:shadow-lg dark:shadow-blue-800/80 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 ">RENT</button>
-                                </div>
-                            </div>
-                            <div className='max-w-[240px] max-h-[500px] mb-10 text-center'>
-                                <img src={images.sofa} className='h-[300px] rounded-3xl  hover:scale-[1.2]' />
-                                <div className='flex justify-between pt-1'>
-                                    <p className=''>SOFA</p>
-                                    <span className=''>5$</span>
-                                </div>
-                                <div className='justify-between flex px-1 text-[15px] mt-5'>
-                                    <button type="button" class="w-full text-white bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 shadow-lg shadow-blue-500/50 dark:shadow-lg dark:shadow-blue-800/80 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 ">RENT</button>
-                                </div>
+                            <div className='relative flex flex-wrap justify-between text-black font-bold'>
+                                <Link to='/detail'>
+                                    <div className='max-w-[240px] max-h-[500px] mb-10 text-center'>
+                                        <img src={images.houseware} className='h-[300px] rounded-3xl hover:scale-[1.2]' />
+                                        <div className='flex justify-between pt-1'>
+                                            <p className=''>HOUSEWARE</p>
+                                            <span className=''>15$</span>
+                                        </div>
+                                        <div className='justify-between flex px-1 text-[15px] mt-5'>
+                                            <button type="button" class="w-full text-white bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 shadow-lg shadow-blue-500/50 dark:shadow-lg dark:shadow-blue-800/80 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 ">RENT</button>
+                                        </div>
+                                    </div>
+                                </Link>
+                                <Link to='/detail'>
+                                    <div className='max-w-[240px] max-h-[500px] mb-10 text-center'>
+                                        <img src={images.houseware} className='h-[300px] rounded-3xl hover:scale-[1.2]' />
+                                        <div className='flex justify-between pt-1'>
+                                            <p className=''>HOUSEWARE</p>
+                                            <span className=''>15$</span>
+                                        </div>
+                                        <div className='justify-between flex px-1 text-[15px] mt-5'>
+                                            <button type="button" class="w-full text-white bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 shadow-lg shadow-blue-500/50 dark:shadow-lg dark:shadow-blue-800/80 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 ">RENT</button>
+                                        </div>
+                                    </div>
+                                </Link>
+                                <Link to='/detail'>
+                                    <div className='max-w-[240px] max-h-[500px] mb-10 text-center'>
+                                        <img src={images.houseware} className='h-[300px] rounded-3xl hover:scale-[1.2]' />
+                                        <div className='flex justify-between pt-1'>
+                                            <p className=''>HOUSEWARE</p>
+                                            <span className=''>15$</span>
+                                        </div>
+                                        <div className='justify-between flex px-1 text-[15px] mt-5'>
+                                            <button type="button" class="w-full text-white bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 shadow-lg shadow-blue-500/50 dark:shadow-lg dark:shadow-blue-800/80 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 ">RENT</button>
+                                        </div>
+                                    </div>
+                                </Link>
+                                <Link to='/detail'>
+                                    <div className='max-w-[240px] max-h-[500px] mb-10 text-center'>
+                                        <img src={images.houseware} className='h-[300px] rounded-3xl hover:scale-[1.2]' />
+                                        <div className='flex justify-between pt-1'>
+                                            <p className=''>HOUSEWARE</p>
+                                            <span className=''>15$</span>
+                                        </div>
+                                        <div className='justify-between flex px-1 text-[15px] mt-5'>
+                                            <button type="button" class="w-full text-white bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 shadow-lg shadow-blue-500/50 dark:shadow-lg dark:shadow-blue-800/80 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 ">RENT</button>
+                                        </div>
+                                    </div>
+                                </Link>
+                                <Link to='/detail'>
+                                    <div className='max-w-[240px] max-h-[500px] mb-10 text-center'>
+                                        <img src={images.houseware} className='h-[300px] rounded-3xl hover:scale-[1.2]' />
+                                        <div className='flex justify-between pt-1'>
+                                            <p className=''>HOUSEWARE</p>
+                                            <span className=''>15$</span>
+                                        </div>
+                                        <div className='justify-between flex px-1 text-[15px] mt-5'>
+                                            <button type="button" class="w-full text-white bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 shadow-lg shadow-blue-500/50 dark:shadow-lg dark:shadow-blue-800/80 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 ">RENT</button>
+                                        </div>
+                                    </div>
+                                </Link>
+                                <Link to='/detail'>
+                                    <div className='max-w-[240px] max-h-[500px] mb-10 text-center'>
+                                        <img src={images.houseware} className='h-[300px] rounded-3xl hover:scale-[1.2]' />
+                                        <div className='flex justify-between pt-1'>
+                                            <p className=''>HOUSEWARE</p>
+                                            <span className=''>15$</span>
+                                        </div>
+                                        <div className='justify-between flex px-1 text-[15px] mt-5'>
+                                            <button type="button" class="w-full text-white bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 shadow-lg shadow-blue-500/50 dark:shadow-lg dark:shadow-blue-800/80 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 ">RENT</button>
+                                        </div>
+                                    </div>
+                                </Link>
+                                <Link to='/detail'>
+                                    <div className='max-w-[240px] max-h-[500px] mb-10 text-center'>
+                                        <img src={images.houseware} className='h-[300px] rounded-3xl hover:scale-[1.2]' />
+                                        <div className='flex justify-between pt-1'>
+                                            <p className=''>HOUSEWARE</p>
+                                            <span className=''>15$</span>
+                                        </div>
+                                        <div className='justify-between flex px-1 text-[15px] mt-5'>
+                                            <button type="button" class="w-full text-white bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 shadow-lg shadow-blue-500/50 dark:shadow-lg dark:shadow-blue-800/80 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 ">RENT</button>
+                                        </div>
+                                    </div>
+                                </Link>
+                                <Link to='/detail'>
+                                    <div className='max-w-[240px] max-h-[500px] mb-10 text-center'>
+                                        <img src={images.houseware} className='h-[300px] rounded-3xl hover:scale-[1.2]' />
+                                        <div className='flex justify-between pt-1'>
+                                            <p className=''>HOUSEWARE</p>
+                                            <span className=''>15$</span>
+                                        </div>
+                                        <div className='justify-between flex px-1 text-[15px] mt-5'>
+                                            <button type="button" class="w-full text-white bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 shadow-lg shadow-blue-500/50 dark:shadow-lg dark:shadow-blue-800/80 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 ">RENT</button>
+                                        </div>
+                                    </div>
+                                </Link>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+            <Footer />
         </div>
     )
 }
