@@ -1,15 +1,31 @@
 import React, { useState } from 'react'
 import Header from '../../components/Header/Header'
 import Footer from '../../components/Footer/Footer'
-import CreatePost from '../CreatePost/CreatePost'
 import Post from '../Post/Post'
 import Posts from '../Post/Posts'
 import images from '../../constants/images';
 import { Link } from 'react-router-dom';
+import ReactQuill from 'react-quill';
+import 'react-quill/dist/quill.snow.css';
 import { AiOutlineSearch, AiOutlineLogout, AiFillMessage, AiOutlineCaretDown, AiOutlineCaretUp } from 'react-icons/ai';
+const modules = {
 
+  toolbar: [
+      [{ header: [1, 2, 3, 4, 5, 6, false] }],
+      [{ font: [] }],
+      [{ size: [] }],
+      ["bold", "italic", "underline", "strike", "blockquote", "link", "image", "video"],
+      [
+          { list: "ordered" },
+          { list: "bullet" },
+          { indent: "-1" },
+          { indent: "+1" },
+      ],
+  ],
+};
 const Blog = () => {
   const [isOpen, setisOpen] = useState(false);
+  const [value, setValue] = useState("");
   return (
     <div>
       <div className='justify-between items-center flex w-full px-14 container mx-auto py-4 border-b border-solid border-b-gray-300'>
@@ -51,8 +67,25 @@ const Blog = () => {
           </div>}
         </div>
       </div >
-      <CreatePost />
-      <Footer />
+      <div className='relative px-14 h-screen'>
+        <div className='flex flex-row justify-center h-full w-full items-center'>
+          <div className='relative h-full w-[60%] flex flex-col overflow-scroll'>
+            <div className=''>
+              <input placeholder='Tittle' className='w-full h-[100px] placeholder:text-[35px] outline-none placeholder:font-bold' />
+            </div>
+            <ReactQuill className='h-auto w-[100%]'
+              theme="snow"
+              value={value}
+              onChange={setValue}
+              modules={modules}
+            />
+          </div>
+          <div className='relative h-full w-[50%] flex flex-col border-l border-solid border-black p-[10px] overflow-scroll pt-[150px]'
+            dangerouslySetInnerHTML={{ __html: value }}>
+          </div>
+        </div>
+      </div>      
+    <Footer />
     </div >
   )
 }

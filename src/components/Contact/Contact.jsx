@@ -18,7 +18,7 @@ const Contact = () => {
                                                 type="text"
                                                 class="form-control block w-full px-3 first-letter:py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
                                                 id="exampleInput7"
-                                                placeholder="Name"
+                                                placeholder="Name" required
                                             />
                                         </div>
                                         <div class="form-group mb-6">
@@ -26,7 +26,7 @@ const Contact = () => {
                                                 type="email"
                                                 class="form-control block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
                                                 id="exampleInput8"
-                                                placeholder="Email address"
+                                                placeholder="Email address" required autoComplete="email"
                                             />
                                         </div>
                                         <div class="form-group mb-6">
@@ -34,7 +34,7 @@ const Contact = () => {
                                                 class="form-control block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
                                                 id="exampleFormControlTextarea13"
                                                 rows="3"
-                                                placeholder="Message"
+                                                placeholder="Message" required
                                             ></textarea>
                                         </div>
                                         <div class="form-group form-check text-center mb-6">

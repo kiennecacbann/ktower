@@ -11,11 +11,11 @@ const ForgotPassword2 = () => {
             <h2 className='text-4xl text-white font-bold text-center'>RESET PASSWORD</h2>
             <div className='flex flex-col text-gray-400 py-2'>
                 <label>New password</label>
-                <input placeholder='Please enter your password' type="text" className='rounded-lg bg-gray-700 mt-2 p-2 focus:border-blue-500 focus:bg-gray-800 focus:outline-none'></input>
+                <input required placeholder='Please enter your password' type="text" className='rounded-lg bg-gray-700 mt-2 p-2 focus:border-blue-500 focus:bg-gray-800 focus:outline-none'></input>
             </div>
             <div className='flex flex-col text-gray-400 py-2'>
                 <label>Confirm new password</label>
-                <input placeholder='Please confirm your password' type="text" className='rounded-lg bg-gray-700 mt-2 p-2 focus:border-blue-500 focus:bg-gray-800 focus:outline-none'></input>
+                <input required placeholder='Please confirm your password' type="text" className='rounded-lg bg-gray-700 mt-2 p-2 focus:border-blue-500 focus:bg-gray-800 focus:outline-none'></input>
             </div>
             <button type='submit' className='w-full my-5 py-2 bg-teal-500 shadow-lg shadow-teal-500/50 hover:shadow-teal-500/40 text-white font-semibold rounded-lg'>RESET</button>
         </form>

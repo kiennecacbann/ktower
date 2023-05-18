@@ -30,8 +30,7 @@ const RentProducts = () => {
             }
         });
     });
-/** 
-    const productsContainer = document.getElementById('products');
+    /*const productsContainer = document.getElementById('listproduct');
     const sortButton = document.getElementById('sortbyname');
 
     // Add click event listener to the sort button
@@ -151,7 +150,7 @@ const RentProducts = () => {
                             <option><button>Sort by Price: High to Low</button></option>
                         </select>
                     </div>
-                    <div id='products'>
+                    <div className='products'>
                         <div className='product' data-category='table'>
                             <div className='mb-5'>
                                 <h2 className='items-center text-[36px] text-black font-bold italic '>TABLES</h2>

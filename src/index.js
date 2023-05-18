@@ -16,17 +16,20 @@ import Bill from './container/Bill/Bill';
 import ForgotPassword from './container/ForgotPassword/ForgotPassword';
 import Contact from './components/Contact/Contact';
 import Blog from './container/Blog/Blog';
+import Post from './container/Post/Post';
 import Error from './components/Error/Error404';
 import Error500 from './components/Error/Error500';
 import ForgotPassword2 from './container/ForgotPassword/ForgotPassword2';
 import ProductDetail from './components/ProductDetail/ProductDetail';
+import App from './App';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <BrowserRouter>
       <Routes>
-        <Route path='home' index element={<Home/>}/> 
-        <Route path="login" element={<Login/>}/>
+        <Route path='/' index element={<App />} />
+        <Route path='home' element={<Home />} />
+        <Route path="login" element={<Login />} />
         <Route path="report" element={<Report />} />
         <Route path="homepage" element={<HomePage />} />
         <Route path="chat" element={<Chat />} />
@@ -40,6 +43,7 @@ root.render(
         <Route path="contact" element={<Contact />} />
         <Route path="bill" element={<Bill />} />
         <Route path="blog" element={<Blog />} />
+        <Route path="post" element={<Post />} />
         <Route path="error" element={<Error />} />
         <Route path="error500" element={<Error500 />} />
         <Route path="detail" element={<ProductDetail />} />
