@@ -50,8 +50,9 @@ const Post = () => {
                         }
                     </div>}
                 </div>
-            </div >            <div className='px-[400px] pb-5'>
-                <div className='w-full bg-[#242526] rounded-[.5rem] px-5 py-4 mt-4' >
+            </div >
+            <div className='px-36 pb-5'>
+                <div className='w-full bg-[#242526] rounded-[.5rem] px-16 py-4 mt-4' >
                     {/**Header */}
                     <div className='flex items-center justify-between'>
                         <div className='flex items-center'>
@@ -71,16 +72,14 @@ const Post = () => {
                         </div>
                     </div>
                     <div className='mt-2 mb-2'>
-                        <h2 className='text-[#dee0e5] font-bold text-[25px] text-justify'>I feel it's difficult to switch to a new language</h2>
+                        <h2 className='text-[#dee0e5] font-bold text-[30px] text-justify'>I feel it's difficult to switch to a new language</h2>
                     </div>
                     <div className='mt-2 mb-2'>
                         <p className='text-[#dee0e5] text-justify'>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
                     </div>
                     {/**Image */}
-                    <div className='flex'>
-                        <div className='mx-5'>
-                            <img src={images.user} className='' />
-                        </div>
+                    <div className=''>
+                        <img src={images.user} className='' />
                     </div>
                     {/**Like comment */}
                     <div className='px-9 mt-2 flex items-center justify-between'>
@@ -103,108 +102,49 @@ const Post = () => {
                         </div>
                     </div>
                 </div>
-                <div className='w-full bg-[#242526] rounded-[.5rem] px-5 py-4 mt-4' >
-                    {/**Header */}
-                    <div className='flex items-center justify-between'>
-                        <div className='flex items-center'>
-                            <div className='w-12 h-12'>
-                                <img src={images.user} className='rounded-full cursor-pointer ' />
+            </div>
+            <div className='w-full px-36'>
+                <h2 className='font-bold text-[40px]'>Related Posts</h2>
+                <div className='grid grid-cols-2 md:grid-cols-4 gap-5 py-5 w-full'>
+                    <div className='max-w-[450px] max-h-[470px] cursor-pointer'>
+                        <img src={images.user} className='w-full max-h-[320px] rounded-t-xl relative' />
+                        <Link to='/post'>
+                            <div className='pb-5 pt-2'>
+                                <p>May 10, 2023</p>
+                                <a className='text-[20px] leading-7 font-bold text-black'>Did you hurt yourself when you fell from the heaven</a>
+                                <p>By Admin</p>
                             </div>
-                            <div className='ml-3'>
-                                <p className='font-bold text-[#dee0e5] hover:underline cursor-pointer'>Kienne</p>
-                                <div className='flex items-center'>
-                                    <p className='text-xs text-[#9b9ea3] mr-1'>3 hours ago &#8226;</p>
-                                    <BiWorld className='text-[#9b9ea3] shrink-0' />
-                                </div>
+                        </Link>
+                    </div>
+                    <div className='max-w-[450px] max-h-[470px] cursor-pointer'>
+                        <img src={images.user} className='w-full max-h-[320px] rounded-t-xl relative' />
+                        <Link to='/post'>
+                            <div className='pb-5 pt-2'>
+                                <p>May 10, 2023</p>
+                                <a className='text-[20px] leading-7 font-bold text-black'>Did you hurt yourself when you fell from the heaven</a>
+                                <p>By Admin</p>
                             </div>
-                        </div>
-                        <div className=''>
-                            <BsThreeDots className='w-10 h-10 text-[#9b9ea3] hover:bg-[#3a3b3c] hover:rounded-full p-2 cursor-pointer' />
-                        </div>
+                        </Link>
                     </div>
-                    <div className='mt-2 mb-2'>
-                        <h2 className='text-[#dee0e5] font-bold text-[25px] text-justify'>I feel it's difficult to switch to a new language</h2>
-                    </div>
-                    <div className='mt-2 mb-2'>
-                        <p className='text-[#dee0e5] text-justify'>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-                    </div>
-                    {/**Image */}
-                    <div className='flex'>
-                        <div className='mx-5'>
-                            <img src={images.user} className='' />
-                        </div>
-                    </div>
-                    {/**Like comment */}
-                    <div className='px-9 mt-2 flex items-center justify-between'>
-                        <div className='w-[1.1rem] h-[1.1rem] cursor-pointer flex items-center'>
-                            <img src={images.like} className='mr-1' />
-                            <span className='text-[#8e8d8d] hover:underline'>199</span>
-                        </div>
-                        <p className='text-[#8e8d8d] cursor-pointer hover:underline'>333 comments</p>
-                    </div>
-                    <div className='px-9'>
-                        <div className='flex justify-between border-y-[1px] border-[#8e8d8d] py-1 mt-5'>
-                            <div className='flex px-6 py-1 items-center hover:bg-[#3a3b3c] hover:rounded-full cursor-pointer'>
-                                <AiFillLike className='h-6 w-6 mr-2 text-[#8e8d8d]' />
-                                <p className='text-[#8e8d8d] font-bold'>Like</p>
+                    <div className='max-w-[450px] max-h-[470px] cursor-pointer'>
+                        <img src={images.user} className='w-full max-h-[320px] rounded-t-xl relative' />
+                        <Link to='/post'>
+                            <div className='pb-5 pt-2'>
+                                <p>May 10, 2023</p>
+                                <a className='text-[20px] leading-7 font-bold text-black'>Did you hurt yourself when you fell from the heaven</a>
+                                <p>By Admin</p>
                             </div>
-                            <div className='flex px-6 py-1 items-center hover:bg-[#3a3b3c] hover:rounded-full cursor-pointer'>
-                                <GoComment className='h-6 w-6 mr-2 text-[#8e8d8d]' />
-                                <p className='text-[#8e8d8d] font-bold'>Comment</p>
+                        </Link>
+                    </div>
+                    <div className='max-w-[450px] max-h-[470px] cursor-pointer'>
+                        <img src={images.user} className='w-full max-h-[320px] rounded-t-xl relative' />
+                        <Link to='/post'>
+                            <div className='pb-5 pt-2'>
+                                <p>May 10, 2023</p>
+                                <a className='text-[20px] leading-7 font-bold text-black'>Did you hurt yourself when you fell from the heaven</a>
+                                <p>By Admin</p>
                             </div>
-                        </div>
-                    </div>
-                </div>
-                <div className='w-full bg-[#242526] rounded-[.5rem] px-5 py-4 mt-4' >
-                    {/**Header */}
-                    <div className='flex items-center justify-between'>
-                        <div className='flex items-center'>
-                            <div className='w-12 h-12'>
-                                <img src={images.user} className='rounded-full cursor-pointer ' />
-                            </div>
-                            <div className='ml-3'>
-                                <p className='font-bold text-[#dee0e5] hover:underline cursor-pointer'>Kienne</p>
-                                <div className='flex items-center'>
-                                    <p className='text-xs text-[#9b9ea3] mr-1'>3 hours ago &#8226;</p>
-                                    <BiWorld className='text-[#9b9ea3] shrink-0' />
-                                </div>
-                            </div>
-                        </div>
-                        <div className=''>
-                            <BsThreeDots className='w-10 h-10 text-[#9b9ea3] hover:bg-[#3a3b3c] hover:rounded-full p-2 cursor-pointer' />
-                        </div>
-                    </div>
-                    <div className='mt-2 mb-2'>
-                        <h2 className='text-[#dee0e5] font-bold text-[25px] text-justify'>I feel it's difficult to switch to a new language</h2>
-                    </div>
-                    <div className='mt-2 mb-2'>
-                        <p className='text-[#dee0e5] text-justify'>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-                    </div>
-                    {/**Image */}
-                    <div className='flex'>
-                        <div className='mx-5'>
-                            <img src={images.user} className='' />
-                        </div>
-                    </div>
-                    {/**Like comment */}
-                    <div className='px-9 mt-2 flex items-center justify-between'>
-                        <div className='w-[1.1rem] h-[1.1rem] cursor-pointer flex items-center'>
-                            <img src={images.like} className='mr-1' />
-                            <span className='text-[#8e8d8d] hover:underline'>199</span>
-                        </div>
-                        <p className='text-[#8e8d8d] cursor-pointer hover:underline'>333 comments</p>
-                    </div>
-                    <div className='px-9'>
-                        <div className='flex justify-between border-y-[1px] border-[#8e8d8d] py-1 mt-5'>
-                            <div className='flex px-6 py-1 items-center hover:bg-[#3a3b3c] hover:rounded-full cursor-pointer'>
-                                <AiFillLike className='h-6 w-6 mr-2 text-[#8e8d8d]' />
-                                <p className='text-[#8e8d8d] font-bold'>Like</p>
-                            </div>
-                            <div className='flex px-6 py-1 items-center hover:bg-[#3a3b3c] hover:rounded-full cursor-pointer'>
-                                <GoComment className='h-6 w-6 mr-2 text-[#8e8d8d]' />
-                                <p className='text-[#8e8d8d] font-bold'>Comment</p>
-                            </div>
-                        </div>
+                        </Link>
                     </div>
                 </div>
             </div>

@@ -1,6 +1,6 @@
 import React from 'react'
 import images from '../../constants/images'
-
+import { Link } from 'react-router-dom'
 const RecentBlog = () => {
     return (
         <div className='pt-[80px]'>
@@ -12,32 +12,38 @@ const RecentBlog = () => {
                 <div className='max-w-[450px] max-h-[470px] cursor-pointer'>
                     <div className='flex'>
                         <img src={images.user} className='w-full max-h-[320px] rounded-t-xl relative' />
-                        <span className='bg-[#ff5857] ml-[260px] mt-[276px] absolute rounded-t-lg p-3 text-white bold uppercase font-semibold text-[13px]'>20 may, 2023</span>
                     </div>
-                    <div className='px-5 py-5'>
-                        <a className='text-[20px] leading-7 font-bold text-black'>Did you hurt yourself when you fell from the heaven</a>
-                        <p>By Admin</p>
-                    </div>
+                    <Link to='/post'>
+                        <div className='pb-5 pt-2'>
+                            <p>May 10, 2023</p>
+                            <a className='text-[20px] leading-7 font-bold text-black'>Did you hurt yourself when you fell from the heaven</a>
+                            <p>By Admin</p>
+                        </div>
+                    </Link>
                 </div>
                 <div className='max-w-[450px] max-h-[470px] cursor-pointer gird grid-cols-3'>
                     <div className='flex'>
                         <img src={images.user} className='w-full max-h-[320px] rounded-t-xl relative' />
-                        <span className='bg-[#ff5857] ml-[260px] mt-[276px] absolute block rounded-t-lg p-3 text-white bold uppercase font-semibold text-[13px]'>20 may, 2023</span>
                     </div>
-                    <div className='px-5 py-5'>
-                        <a className='text-[20px] leading-7 font-bold text-black'>Did you hurt yourself when you fell from the heaven</a>
-                        <p>By Admin</p>
-                    </div>
+                    <Link to='/post'>
+                        <div className='pb-5 pt-2'>
+                            <p>May 10, 2023</p>
+                            <a className='text-[20px] leading-7 font-bold text-black'>Did you hurt yourself when you fell from the heaven</a>
+                            <p>By Admin</p>
+                        </div>
+                    </Link>
                 </div>
                 <div className='max-w-[450px] max-h-[470px] cursor-pointer'>
                     <div className='flex'>
                         <img src={images.user} className='w-full max-h-[320px] rounded-t-xl relative' />
-                        <span className='bg-[#ff5857] ml-[260px] mt-[276px] absolute rounded-t-lg p-3 text-white bold uppercase font-semibold text-[13px]'>20 may, 2023</span>
                     </div>
-                    <div className='px-5 py-5'>
-                        <a className='text-[20px] leading-7 font-bold text-black'>Did you hurt yourself when you fell from the heaven</a>
-                        <p>By Admin</p>
-                    </div>
+                    <Link to='/post'>
+                        <div className='pb-5 pt-2'>
+                            <p>May 10, 2023</p>
+                            <a className='text-[20px] leading-7 font-bold text-black'>Did you hurt yourself when you fell from the heaven</a>
+                            <p>By Admin</p>
+                        </div>
+                    </Link>
                 </div>
             </div>
         </div>

@@ -178,9 +178,8 @@ const Contact = () => {
                     </div>
                 </section>
             </div>
-            <div className="w-full">
-                <iframe
-                    src="https://maps.google.com/maps?q=manhatan&t=&z=13&ie=UTF8&iwloc=&output=embed"
+            <div className="w-full h-[400px]">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.1265616110336!2d106.71188097472498!3d10.801617489348693!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x317528a459cb43ab%3A0x6c3d29d370b52a7e!2sHo%20Chi%20Minh%20City%20University%20of%20Technology%20-%20HUTECH!5e0!3m2!1sen!2sus!4v1684383806424!5m2!1sen!2sus"
                     class="left-0 top-0 h-full w-full rounded-t-lg lg:rounded-tr-none lg:rounded-bl-lg"
                     frameborder="0"
                     allowfullscreen
