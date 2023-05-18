@@ -50,7 +50,7 @@ const Post = () => {
                         }
                     </div>}
                 </div>
-            </div >
+            </div>
             <div className='px-36 pb-5'>
                 <div className='w-full bg-[#242526] rounded-[.5rem] px-16 py-4 mt-4 pb-14' >
                     {/**Header */}

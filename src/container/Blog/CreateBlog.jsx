@@ -24,7 +24,11 @@ const modules = {
 };
 const CreateBlog = () => {
   const [isOpen, setisOpen] = useState(false);
+  const [title, setTitle] = useState("");
   const [value, setValue] = useState("");
+
+
+
   return (
     <div>
       <div className='justify-between items-center flex w-full px-14 container mx-auto py-4 border-b border-solid border-b-gray-300'>
@@ -65,12 +69,12 @@ const CreateBlog = () => {
             }
           </div>}
         </div>
-      </div >
+      </div>
       <div className='relative px-14 h-screen'>
         <div className='flex flex-row justify-center h-full w-full items-center'>
           <div className='relative h-full w-[60%] flex flex-col overflow-scroll'>
             <div className=''>
-              <input placeholder='Tittle' className='w-full h-[100px] placeholder:text-[35px] outline-none placeholder:font-bold' />
+              <input placeholder='Tittle' value={(e) => setTitle(e.target.value)} className='w-full h-[100px] placeholder:text-[35px] outline-none placeholder:font-bold' />
             </div>
             <ReactQuill className='h-auto w-[100%]'
               theme="snow"
@@ -85,7 +89,7 @@ const CreateBlog = () => {
         </div>
       </div>      
     <Footer />
-    </div >
+    </div>
   )
 }
 

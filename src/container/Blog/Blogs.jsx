@@ -8,6 +8,8 @@ import { Link } from 'react-router-dom'
 import Footer from '../../components/Footer/Footer'
 const Blogs = () => {
     const [isOpen, setisOpen] = useState(false);
+    const [data, setData] = useState([]);
+
     return (
         <div className='w-screen sm:w-full'>
             <div className='justify-between items-center flex w-full px-14 container mx-auto py-4 border-b border-solid border-b-gray-300'>
@@ -49,22 +51,27 @@ const Blogs = () => {
                         }
                     </div>}
                 </div>
-            </div >
+            </div>
             <div className='px-36 pt-5'>
                 <div>
                     <h2 className='font-bold text-[40px]'>Blogs</h2>
                     <p>This is all posts</p>
                 </div>
+                {/* map o day */}
                 <div className='border border-solid rounded-lg border-black p-5 mt-16 mb-5'>
                     <div className='flex items-center justify-between'>
                         <div className='flex items-center'>
                             <div className='w-12 h-12'>
-                                <img src={images.user} className='rounded-full cursor-pointer ' />
+                                <img src={images.user}  className='rounded-full cursor-pointer ' />
                             </div>
                             <div className='ml-3'>
-                                <p className='font-bold text-black hover:underline cursor-pointer'>Kienne</p>
+                                <p className='font-bold text-black hover:underline cursor-pointer'>Kienne 
+                                    {/* {item.user} */}
+                                </p>
                                 <div className='flex items-center'>
-                                    <p className='text-xs text-[#9b9ea3] mr-1'>3 hours ago &#8226;</p>
+                                    <p className='text-xs text-[#9b9ea3] mr-1'>3 hours ago &#8226;
+
+                                    </p>
                                     <BiWorld className='text-[#9b9ea3] shrink-0' />
                                 </div>
                             </div>

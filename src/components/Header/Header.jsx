@@ -8,12 +8,20 @@ import { BiHelpCircle, BiLogOut } from 'react-icons/bi';
 import { Link } from 'react-router-dom';
 import { VscLibrary } from 'react-icons/vsc';
 import App from '../../App';
+import clientAxios from '../../server/connect';
 <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.5/flowbite.min.css" rel="stylesheet" />
 export default function Navbar({ fixed }) {
     const [isOpen, setisOpen] = useState(false);
     const [openNoti, setopenNoti] = useState(false);
     const [openBill, setopenBill] = useState(false);
 
+    const logout = () => {
+        clientAxios
+      .post("/dev/v1/users/logout")
+      .then((res) => res.json())
+      .then((res) => console.log(res))
+      .catch((err) => console.log(err));
+    }
     return (
         <nav className="relative bg-white ">
                 <div className="container mx-auto px-14 py-7">
@@ -184,7 +192,7 @@ export default function Navbar({ fixed }) {
                                             <button class=" w-full font-bold flex items-center p-2 text-[16px] cursor-pointer  hover:bg-gray-200 dark:hover:bg-gray-600 dark:hover:text-white"><img className='h-10 w-10 rounded-full mr-2' src={images.user} />Kien Nguyen</button>
                                         </Link>
                                         <Link>
-                                            <a href="#" class=" w-full font-bold flex items-center p-2 text-[16px] cursor-pointer  hover:bg-gray-200 dark:hover:bg-gray-600 dark:hover:text-white"><AiOutlineLogout className='mr-2 h-10 w-10 text-[10px] bg-gray-300 rounded-full' />Log Out</a>
+                                            <a href="#" class=" w-full font-bold flex items-center p-2 text-[16px] cursor-pointer  hover:bg-gray-200 dark:hover:bg-gray-600 dark:hover:text-white"><AiOutlineLogout className='mr-2 h-10 w-10 text-[10px] bg-gray-300 rounded-full' onClick={logout}/>Log Out</a>
                                         </Link>
                                     </div>
                                 }
