@@ -52,7 +52,7 @@ const Post = () => {
                 </div>
             </div >
             <div className='px-36 pb-5'>
-                <div className='w-full bg-[#242526] rounded-[.5rem] px-16 py-4 mt-4' >
+                <div className='w-full bg-[#242526] rounded-[.5rem] px-16 py-4 mt-4 pb-14' >
                     {/**Header */}
                     <div className='flex items-center justify-between'>
                         <div className='flex items-center'>
@@ -67,9 +67,6 @@ const Post = () => {
                                 </div>
                             </div>
                         </div>
-                        <div className=''>
-                            <BsThreeDots className='w-10 h-10 text-[#9b9ea3] hover:bg-[#3a3b3c] hover:rounded-full p-2 cursor-pointer' />
-                        </div>
                     </div>
                     <div className='mt-2 mb-2'>
                         <h2 className='text-[#dee0e5] font-bold text-[30px] text-justify'>I feel it's difficult to switch to a new language</h2>
@@ -80,27 +77,7 @@ const Post = () => {
                     {/**Image */}
                     <div className=''>
                         <img src={images.user} className='' />
-                    </div>
-                    {/**Like comment */}
-                    <div className='px-9 mt-2 flex items-center justify-between'>
-                        <div className='w-[1.1rem] h-[1.1rem] cursor-pointer flex items-center'>
-                            <img src={images.like} className='mr-1' />
-                            <span className='text-[#8e8d8d] hover:underline'>199</span>
-                        </div>
-                        <p className='text-[#8e8d8d] cursor-pointer hover:underline'>333 comments</p>
-                    </div>
-                    <div className='px-9'>
-                        <div className='flex justify-between border-y-[1px] border-[#8e8d8d] py-1 mt-5'>
-                            <div className='flex px-6 py-1 items-center hover:bg-[#3a3b3c] hover:rounded-full cursor-pointer'>
-                                <AiFillLike className='h-6 w-6 mr-2 text-[#8e8d8d]' />
-                                <p className='text-[#8e8d8d] font-bold'>Like</p>
-                            </div>
-                            <div className='flex px-6 py-1 items-center hover:bg-[#3a3b3c] hover:rounded-full cursor-pointer'>
-                                <GoComment className='h-6 w-6 mr-2 text-[#8e8d8d]' />
-                                <p className='text-[#8e8d8d] font-bold'>Comment</p>
-                            </div>
-                        </div>
-                    </div>
+                    </div>            
                 </div>
             </div>
             <div className='w-full px-36'>

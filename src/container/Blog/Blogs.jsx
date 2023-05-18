@@ -9,7 +9,7 @@ import Footer from '../../components/Footer/Footer'
 const Blogs = () => {
     const [isOpen, setisOpen] = useState(false);
     return (
-        <div>
+        <div className='w-screen sm:w-full'>
             <div className='justify-between items-center flex w-full px-14 container mx-auto py-4 border-b border-solid border-b-gray-300'>
                 <div className="w-full flex justify-between lg:w-auto lg:static lg:block lg:justify-start cursor-pointer ">
                     <Link to='/home'>
@@ -69,9 +69,7 @@ const Blogs = () => {
                                 </div>
                             </div>
                         </div>
-                        <div className=''>
-                            <BsThreeDots className='w-10 h-10 text-[#9b9ea3] hover:bg-[#3a3b3c] hover:rounded-full p-2 cursor-pointer' />
-                        </div>
+
                     </div>
                     <div className='flex justify-between'>
                         <div className='mt-2 mb-2'>
@@ -97,9 +95,7 @@ const Blogs = () => {
                                 </div>
                             </div>
                         </div>
-                        <div className=''>
-                            <BsThreeDots className='w-10 h-10 text-[#9b9ea3] hover:bg-[#3a3b3c] hover:rounded-full p-2 cursor-pointer' />
-                        </div>
+
                     </div>
                     <div className='flex justify-between'>
                         <div className='mt-2 mb-2'>
@@ -124,9 +120,7 @@ const Blogs = () => {
                                 </div>
                             </div>
                         </div>
-                        <div className=''>
-                            <BsThreeDots className='w-10 h-10 text-[#9b9ea3] hover:bg-[#3a3b3c] hover:rounded-full p-2 cursor-pointer' />
-                        </div>
+
                     </div>
                     <div className='flex justify-between'>
                         <div className='mt-2 mb-2'>

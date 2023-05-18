@@ -1,8 +1,7 @@
 import React, { useState } from 'react'
 import Header from '../../components/Header/Header'
 import Footer from '../../components/Footer/Footer'
-import Post from '../Post/Post'
-import Posts from '../Post/Posts'
+import Blog from './Blog'
 import images from '../../constants/images';
 import { Link } from 'react-router-dom';
 import ReactQuill from 'react-quill';
@@ -23,7 +22,7 @@ const modules = {
       ],
   ],
 };
-const Blog = () => {
+const CreateBlog = () => {
   const [isOpen, setisOpen] = useState(false);
   const [value, setValue] = useState("");
   return (
@@ -90,4 +89,4 @@ const Blog = () => {
   )
 }
 
-export default Blog
+export default CreateBlog

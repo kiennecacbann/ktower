@@ -5,7 +5,7 @@ import './index.css';
 import Home from './page/Home/Home';
 import Report from './container/Report/Report';
 import Chat from './container/Message/Chat';
-import Login from './components/Login/Login';
+import Login from './container/Login/Login';
 import RentProducts from './container/Rent/RentProducts';
 import ShoppingCart from './container/ShoppingCart/ShoppingCart';
 import OrderHistory from './container/OrderHistory/OrderHistory';
@@ -15,14 +15,14 @@ import Profile from './components/Profile/Profile';
 import Bill from './container/Bill/Bill';
 import ForgotPassword from './container/ForgotPassword/ForgotPassword';
 import Contact from './components/Contact/Contact';
-import CreateBlog from './container/CreateBlog/CreateBlog';
-import Post from './container/Post/Post';
-import Error from './components/Error/Error404';
-import Error500 from './components/Error/Error500';
+import CreateBlog from './container/Blog/CreateBlog';
+import Post from './container/Blog/Blog';
+import Error from './container/Error/Error404';
+import Error500 from './container/Error/Error500';
 import ForgotPassword2 from './container/ForgotPassword/ForgotPassword2';
 import ProductDetail from './components/ProductDetail/ProductDetail';
 import App from './App';
-import Blogs from './container/CreateBlog/Blogs';
+import Blogs from './container/Blog/Blogs';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
