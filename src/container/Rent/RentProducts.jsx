@@ -570,5 +570,4 @@ const RentProducts = () => {
         </div>
     )
 }
-
 export default RentProducts

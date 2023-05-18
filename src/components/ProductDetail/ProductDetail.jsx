@@ -43,7 +43,7 @@ const ProductDetail = () => {
 
       </div>
       <div className='mt-10 w-full px-14'>
-        <span className='uppercase font-bold text-black'>similar product:</span>
+        <span className='uppercase font-bold text-black text-[30px]'>similar product:</span>
         <div className='grid grid-cols-2 md:grid-cols-5 gap-5 px-5 py-5 w-full'>
           <Link to='/detail'>
             <div className='max-w-[240px] max-h-[500px] mb-10 text-center'>
