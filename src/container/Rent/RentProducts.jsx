@@ -156,103 +156,102 @@ const RentProducts = () => {
                                 <h2 className='items-center text-[36px] text-black font-bold italic '>TABLES</h2>
                             </div>
                             <div className='relative flex flex-wrap justify-between text-black font-bold'>
-                                <Link to='/detail'>
-                                    <div className='max-w-[240px] max-h-[500px] mb-10 text-center'>
+                                <div className='max-w-[240px] max-h-[500px] mb-10 text-center'>
+                                    <Link to='/detail'>
                                         <img src={images.table} className='h-[300px] rounded-3xl hover:scale-[1.2]' />
                                         <div className='flex justify-between pt-1'>
                                             <p className=''>TABLE</p>
                                             <span className=''>25$</span>
                                         </div>
-                                        <div className='justify-between flex px-1 text-[15px] mt-5'>
-                                            <button type="button" class="w-full text-white bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 shadow-lg shadow-blue-500/50 dark:shadow-lg dark:shadow-blue-800/80 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 ">RENT</button>
-                                        </div>
+                                    </Link>
+                                    <div className='justify-between flex px-1 text-[15px] mt-5'>
+                                        <button type="button" class="w-full text-white bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 shadow-lg shadow-blue-500/50 dark:shadow-lg dark:shadow-blue-800/80 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 ">RENT</button>
                                     </div>
-                                </Link>
-                                <Link to='/detail'>
-                                    <div className='max-w-[240px] max-h-[500px] mb-10 text-center'>
+                                </div>
+                                <div className='max-w-[240px] max-h-[500px] mb-10 text-center'>
+                                    <Link to='/detail'>
                                         <img src={images.table} className='h-[300px] rounded-3xl hover:scale-[1.2]' />
                                         <div className='flex justify-between pt-1'>
                                             <p className=''>TABLE</p>
                                             <span className=''>25$</span>
                                         </div>
-                                        <div className='justify-between flex px-1 text-[15px] mt-5'>
-                                            <button type="button" class="w-full text-white bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 shadow-lg shadow-blue-500/50 dark:shadow-lg dark:shadow-blue-800/80 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 ">RENT</button>
-                                        </div>
+                                    </Link>
+                                    <div className='justify-between flex px-1 text-[15px] mt-5'>
+                                        <button type="button" class="w-full text-white bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 shadow-lg shadow-blue-500/50 dark:shadow-lg dark:shadow-blue-800/80 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 ">RENT</button>
                                     </div>
-                                </Link>
-                                <Link to='/detail'>
-                                    <div className='max-w-[240px] max-h-[500px] mb-10 text-center'>
+                                </div>
+                                <div className='max-w-[240px] max-h-[500px] mb-10 text-center'>
+                                    <Link to='/detail'>
                                         <img src={images.table} className='h-[300px] rounded-3xl hover:scale-[1.2]' />
                                         <div className='flex justify-between pt-1'>
                                             <p className=''>TABLE</p>
                                             <span className=''>25$</span>
                                         </div>
-                                        <div className='justify-between flex px-1 text-[15px] mt-5'>
-                                            <button type="button" class="w-full text-white bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 shadow-lg shadow-blue-500/50 dark:shadow-lg dark:shadow-blue-800/80 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 ">RENT</button>
-                                        </div>
+                                    </Link>
+                                    <div className='justify-between flex px-1 text-[15px] mt-5'>
+                                        <button type="button" class="w-full text-white bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 shadow-lg shadow-blue-500/50 dark:shadow-lg dark:shadow-blue-800/80 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 ">RENT</button>
                                     </div>
-                                </Link>
-                                <Link to='/detail'>
-                                    <div className='max-w-[240px] max-h-[500px] mb-10 text-center'>
+                                </div>
+                                <div className='max-w-[240px] max-h-[500px] mb-10 text-center'>
+                                    <Link to='/detail'>
                                         <img src={images.table} className='h-[300px] rounded-3xl hover:scale-[1.2]' />
                                         <div className='flex justify-between pt-1'>
                                             <p className=''>TABLE</p>
                                             <span className=''>25$</span>
                                         </div>
-                                        <div className='justify-between flex px-1 text-[15px] mt-5'>
-                                            <button type="button" class="w-full text-white bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 shadow-lg shadow-blue-500/50 dark:shadow-lg dark:shadow-blue-800/80 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 ">RENT</button>
-                                        </div>
+                                    </Link>
+                                    <div className='justify-between flex px-1 text-[15px] mt-5'>
+                                        <button type="button" class="w-full text-white bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 shadow-lg shadow-blue-500/50 dark:shadow-lg dark:shadow-blue-800/80 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 ">RENT</button>
                                     </div>
-                                </Link>
-                                <Link to='/detail'>
-                                    <div className='max-w-[240px] max-h-[500px] mb-10 text-center'>
+                                </div>
+                                <div className='max-w-[240px] max-h-[500px] mb-10 text-center'>
+                                    <Link to='/detail'>
                                         <img src={images.table} className='h-[300px] rounded-3xl hover:scale-[1.2]' />
                                         <div className='flex justify-between pt-1'>
                                             <p className=''>TABLE</p>
                                             <span className=''>25$</span>
                                         </div>
-                                        <div className='justify-between flex px-1 text-[15px] mt-5'>
-                                            <button type="button" class="w-full text-white bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 shadow-lg shadow-blue-500/50 dark:shadow-lg dark:shadow-blue-800/80 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 ">RENT</button>
-                                        </div>
+                                    </Link>
+                                    <div className='justify-between flex px-1 text-[15px] mt-5'>
+                                        <button type="button" class="w-full text-white bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 shadow-lg shadow-blue-500/50 dark:shadow-lg dark:shadow-blue-800/80 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 ">RENT</button>
                                     </div>
-                                </Link>
-                                <Link to='/detail'>
-                                    <div className='max-w-[240px] max-h-[500px] mb-10 text-center'>
+                                </div>
+                                <div className='max-w-[240px] max-h-[500px] mb-10 text-center'>
+                                    <Link to='/detail'>
                                         <img src={images.table} className='h-[300px] rounded-3xl hover:scale-[1.2]' />
                                         <div className='flex justify-between pt-1'>
                                             <p className=''>TABLE</p>
                                             <span className=''>25$</span>
                                         </div>
-                                        <div className='justify-between flex px-1 text-[15px] mt-5'>
-                                            <button type="button" class="w-full text-white bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 shadow-lg shadow-blue-500/50 dark:shadow-lg dark:shadow-blue-800/80 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 ">RENT</button>
-                                        </div>
+                                    </Link>
+                                    <div className='justify-between flex px-1 text-[15px] mt-5'>
+                                        <button type="button" class="w-full text-white bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 shadow-lg shadow-blue-500/50 dark:shadow-lg dark:shadow-blue-800/80 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 ">RENT</button>
                                     </div>
-                                </Link>
-                                <Link to='/detail'>
-                                    <div className='max-w-[240px] max-h-[500px] mb
-                                -10 text-center'>
+                                </div>
+                                <div className='max-w-[240px] max-h-[500px] mb-10 text-center'>
+                                    <Link to='/detail'>
                                         <img src={images.table} className='h-[300px] rounded-3xl hover:scale-[1.2]' />
                                         <div className='flex justify-between pt-1'>
                                             <p className=''>TABLE</p>
                                             <span className=''>25$</span>
                                         </div>
-                                        <div className='justify-between flex px-1 text-[15px] mt-5'>
-                                            <button type="button" class="w-full text-white bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 shadow-lg shadow-blue-500/50 dark:shadow-lg dark:shadow-blue-800/80 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 ">RENT</button>
-                                        </div>
+                                    </Link>
+                                    <div className='justify-between flex px-1 text-[15px] mt-5'>
+                                        <button type="button" class="w-full text-white bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 shadow-lg shadow-blue-500/50 dark:shadow-lg dark:shadow-blue-800/80 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 ">RENT</button>
                                     </div>
-                                </Link>
-                                <Link to='/detail'>
-                                    <div className='max-w-[240px] max-h-[500px] mb-10 text-center'>
+                                </div>
+                                <div className='max-w-[240px] max-h-[500px] mb-10 text-center'>
+                                    <Link to='/detail'>
                                         <img src={images.table} className='h-[300px] rounded-3xl hover:scale-[1.2]' />
                                         <div className='flex justify-between pt-1'>
                                             <p className=''>TABLE</p>
                                             <span className=''>25$</span>
                                         </div>
-                                        <div className='justify-between flex px-1 text-[15px] mt-5'>
-                                            <button type="button" class="w-full text-white bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 shadow-lg shadow-blue-500/50 dark:shadow-lg dark:shadow-blue-800/80 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 ">RENT</button>
-                                        </div>
+                                    </Link>
+                                    <div className='justify-between flex px-1 text-[15px] mt-5'>
+                                        <button type="button" class="w-full text-white bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 shadow-lg shadow-blue-500/50 dark:shadow-lg dark:shadow-blue-800/80 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 ">RENT</button>
                                     </div>
-                                </Link>
+                                </div>
                             </div>
                         </div>
                         <div className='product' data-category='chair'>
@@ -260,103 +259,102 @@ const RentProducts = () => {
                                 <h2 className='items-center text-[36px] text-black font-bold italic '>CHAIRS</h2>
                             </div>
                             <div className='relative flex flex-wrap justify-between text-black font-bold'>
-                                <Link to='/detail'>
-                                    <div className='max-w-[240px] max-h-[500px] mb-10 text-center'>
+                                <div className='max-w-[240px] max-h-[500px] mb-10 text-center'>
+                                    <Link to='/detail'>
                                         <img src={images.chair} className='h-[300px] rounded-3xl hover:scale-[1.2]' />
                                         <div className='flex justify-between pt-1'>
                                             <p className=''>CHAIR</p>
-                                            <span className=''>5$</span>
+                                            <span className=''>25$</span>
                                         </div>
-                                        <div className='justify-between flex px-1 text-[15px] mt-5'>
-                                            <button type="button" class="w-full text-white bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 shadow-lg shadow-blue-500/50 dark:shadow-lg dark:shadow-blue-800/80 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 ">RENT</button>
-                                        </div>
+                                    </Link>
+                                    <div className='justify-between flex px-1 text-[15px] mt-5'>
+                                        <button type="button" class="w-full text-white bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 shadow-lg shadow-blue-500/50 dark:shadow-lg dark:shadow-blue-800/80 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 ">RENT</button>
                                     </div>
-                                </Link>
-                                <Link to='/detail'>
-                                    <div className='max-w-[240px] max-h-[500px] mb-10 text-center'>
+                                </div>
+                                <div className='max-w-[240px] max-h-[500px] mb-10 text-center'>
+                                    <Link to='/detail'>
                                         <img src={images.chair} className='h-[300px] rounded-3xl hover:scale-[1.2]' />
                                         <div className='flex justify-between pt-1'>
                                             <p className=''>CHAIR</p>
-                                            <span className=''>5$</span>
+                                            <span className=''>25$</span>
                                         </div>
-                                        <div className='justify-between flex px-1 text-[15px] mt-5'>
-                                            <button type="button" class="w-full text-white bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 shadow-lg shadow-blue-500/50 dark:shadow-lg dark:shadow-blue-800/80 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 ">RENT</button>
-                                        </div>
+                                    </Link>
+                                    <div className='justify-between flex px-1 text-[15px] mt-5'>
+                                        <button type="button" class="w-full text-white bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 shadow-lg shadow-blue-500/50 dark:shadow-lg dark:shadow-blue-800/80 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 ">RENT</button>
                                     </div>
-                                </Link>
-                                <Link to='/detail'>
-                                    <div className='max-w-[240px] max-h-[500px] mb-10 text-center'>
+                                </div>
+                                <div className='max-w-[240px] max-h-[500px] mb-10 text-center'>
+                                    <Link to='/detail'>
                                         <img src={images.chair} className='h-[300px] rounded-3xl hover:scale-[1.2]' />
                                         <div className='flex justify-between pt-1'>
                                             <p className=''>CHAIR</p>
-                                            <span className=''>5$</span>
+                                            <span className=''>25$</span>
                                         </div>
-                                        <div className='justify-between flex px-1 text-[15px] mt-5'>
-                                            <button type="button" class="w-full text-white bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 shadow-lg shadow-blue-500/50 dark:shadow-lg dark:shadow-blue-800/80 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 ">RENT</button>
-                                        </div>
+                                    </Link>
+                                    <div className='justify-between flex px-1 text-[15px] mt-5'>
+                                        <button type="button" class="w-full text-white bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 shadow-lg shadow-blue-500/50 dark:shadow-lg dark:shadow-blue-800/80 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 ">RENT</button>
                                     </div>
-                                </Link>
-                                <Link to='/detail'>
-                                    <div className='max-w-[240px] max-h-[500px] mb-10 text-center'>
+                                </div>
+                                <div className='max-w-[240px] max-h-[500px] mb-10 text-center'>
+                                    <Link to='/detail'>
                                         <img src={images.chair} className='h-[300px] rounded-3xl hover:scale-[1.2]' />
                                         <div className='flex justify-between pt-1'>
                                             <p className=''>CHAIR</p>
-                                            <span className=''>5$</span>
+                                            <span className=''>25$</span>
                                         </div>
-                                        <div className='justify-between flex px-1 text-[15px] mt-5'>
-                                            <button type="button" class="w-full text-white bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 shadow-lg shadow-blue-500/50 dark:shadow-lg dark:shadow-blue-800/80 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 ">RENT</button>
-                                        </div>
+                                    </Link>
+                                    <div className='justify-between flex px-1 text-[15px] mt-5'>
+                                        <button type="button" class="w-full text-white bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 shadow-lg shadow-blue-500/50 dark:shadow-lg dark:shadow-blue-800/80 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 ">RENT</button>
                                     </div>
-                                </Link>
-                                <Link to='/detail'>
-                                    <div className='max-w-[240px] max-h-[500px] mb-10 text-center'>
+                                </div>
+                                <div className='max-w-[240px] max-h-[500px] mb-10 text-center'>
+                                    <Link to='/detail'>
                                         <img src={images.chair} className='h-[300px] rounded-3xl hover:scale-[1.2]' />
                                         <div className='flex justify-between pt-1'>
                                             <p className=''>CHAIR</p>
-                                            <span className=''>5$</span>
+                                            <span className=''>25$</span>
                                         </div>
-                                        <div className='justify-between flex px-1 text-[15px] mt-5'>
-                                            <button type="button" class="w-full text-white bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 shadow-lg shadow-blue-500/50 dark:shadow-lg dark:shadow-blue-800/80 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 ">RENT</button>
-                                        </div>
+                                    </Link>
+                                    <div className='justify-between flex px-1 text-[15px] mt-5'>
+                                        <button type="button" class="w-full text-white bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 shadow-lg shadow-blue-500/50 dark:shadow-lg dark:shadow-blue-800/80 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 ">RENT</button>
                                     </div>
-                                </Link>
-                                <Link to='/detail'>
-                                    <div className='max-w-[240px] max-h-[500px] mb-10 text-center'>
+                                </div>
+                                <div className='max-w-[240px] max-h-[500px] mb-10 text-center'>
+                                    <Link to='/detail'>
                                         <img src={images.chair} className='h-[300px] rounded-3xl hover:scale-[1.2]' />
                                         <div className='flex justify-between pt-1'>
                                             <p className=''>CHAIR</p>
-                                            <span className=''>5$</span>
+                                            <span className=''>25$</span>
                                         </div>
-                                        <div className='justify-between flex px-1 text-[15px] mt-5'>
-                                            <button type="button" class="w-full text-white bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 shadow-lg shadow-blue-500/50 dark:shadow-lg dark:shadow-blue-800/80 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 ">RENT</button>
-                                        </div>
+                                    </Link>
+                                    <div className='justify-between flex px-1 text-[15px] mt-5'>
+                                        <button type="button" class="w-full text-white bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 shadow-lg shadow-blue-500/50 dark:shadow-lg dark:shadow-blue-800/80 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 ">RENT</button>
                                     </div>
-                                </Link>
-                                <Link to='/detail'>
-                                    <div className='max-w-[240px] max-h-[500px] mb-10 text-center'>
+                                </div>
+                                <div className='max-w-[240px] max-h-[500px] mb-10 text-center'>
+                                    <Link to='/detail'>
                                         <img src={images.chair} className='h-[300px] rounded-3xl hover:scale-[1.2]' />
                                         <div className='flex justify-between pt-1'>
                                             <p className=''>CHAIR</p>
-                                            <span className=''>5$</span>
+                                            <span className=''>25$</span>
                                         </div>
-                                        <div className='justify-between flex px-1 text-[15px] mt-5'>
-                                            <button type="button" class="w-full text-white bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 shadow-lg shadow-blue-500/50 dark:shadow-lg dark:shadow-blue-800/80 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 ">RENT</button>
-                                        </div>
+                                    </Link>
+                                    <div className='justify-between flex px-1 text-[15px] mt-5'>
+                                        <button type="button" class="w-full text-white bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 shadow-lg shadow-blue-500/50 dark:shadow-lg dark:shadow-blue-800/80 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 ">RENT</button>
                                     </div>
-                                </Link>
-                                <Link to='/detail'>
-                                    <div className='max-w-[240px] max-h-[500px] mb-10 text-center'>
+                                </div>
+                                <div className='max-w-[240px] max-h-[500px] mb-10 text-center'>
+                                    <Link to='/detail'>
                                         <img src={images.chair} className='h-[300px] rounded-3xl hover:scale-[1.2]' />
                                         <div className='flex justify-between pt-1'>
                                             <p className=''>CHAIR</p>
-                                            <span className=''>5$</span>
+                                            <span className=''>25$</span>
                                         </div>
-                                        <div className='justify-between flex px-1 text-[15px] mt-5'>
-                                            <button type="button" class="w-full text-white bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 shadow-lg shadow-blue-500/50 dark:shadow-lg dark:shadow-blue-800/80 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 ">RENT</button>
-                                        </div>
+                                    </Link>
+                                    <div className='justify-between flex px-1 text-[15px] mt-5'>
+                                        <button type="button" class="w-full text-white bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 shadow-lg shadow-blue-500/50 dark:shadow-lg dark:shadow-blue-800/80 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 ">RENT</button>
                                     </div>
-                                </Link>
-
+                                </div>
                             </div>
                         </div>
                         <div className='product' data-category='sofa'>
@@ -364,84 +362,98 @@ const RentProducts = () => {
                                 <h2 className='items-center text-[36px] text-black font-bold italic '>SOFAS</h2>
                             </div>
                             <div className='relative flex flex-wrap justify-between text-black font-bold'>
-                                <Link to='/detail'>
-                                    <div className='max-w-[240px] max-h-[500px] mb-10 text-center'>
+                                <div className='max-w-[240px] max-h-[500px] mb-10 text-center'>
+                                    <Link to='/detail'>
                                         <img src={images.sofa} className='h-[300px] rounded-3xl hover:scale-[1.2]' />
                                         <div className='flex justify-between pt-1'>
                                             <p className=''>SOFA</p>
-                                            <span className=''>5$</span>
+                                            <span className=''>25$</span>
                                         </div>
-                                        <div className='justify-between flex px-1 text-[15px] mt-5'>
-                                            <button type="button" class="w-full text-white bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 shadow-lg shadow-blue-500/50 dark:shadow-lg dark:shadow-blue-800/80 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 ">RENT</button>
+                                    </Link>
+                                    <div className='justify-between flex px-1 text-[15px] mt-5'>
+                                        <button type="button" class="w-full text-white bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 shadow-lg shadow-blue-500/50 dark:shadow-lg dark:shadow-blue-800/80 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 ">RENT</button>
+                                    </div>
+                                </div>
+                                <div className='max-w-[240px] max-h-[500px] mb-10 text-center'>
+                                    <Link to='/detail'>
+                                        <img src={images.sofa} className='h-[300px] rounded-3xl hover:scale-[1.2]' />
+                                        <div className='flex justify-between pt-1'>
+                                            <p className=''>SOFA</p>
+                                            <span className=''>25$</span>
                                         </div>
-                                    </div>
-                                </Link>
-                                <div className='max-w-[240px] max-h-[500px] mb-10 text-center'>
-                                    <img src={images.sofa} className='h-[300px] rounded-3xl hover:scale-[1.2]' />
-                                    <div className='flex justify-between pt-1'>
-                                        <p className=''>SOFA</p>
-                                        <span className=''>5$</span>
-                                    </div>
+                                    </Link>
                                     <div className='justify-between flex px-1 text-[15px] mt-5'>
                                         <button type="button" class="w-full text-white bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 shadow-lg shadow-blue-500/50 dark:shadow-lg dark:shadow-blue-800/80 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 ">RENT</button>
                                     </div>
                                 </div>
                                 <div className='max-w-[240px] max-h-[500px] mb-10 text-center'>
-                                    <img src={images.sofa} className='h-[300px] rounded-3xl  hover:scale-[1.2]' />
-                                    <div className='flex justify-between pt-1'>
-                                        <p className=''>SOFA</p>
-                                        <span className=''>5$</span>
-                                    </div>
+                                    <Link to='/detail'>
+                                        <img src={images.sofa} className='h-[300px] rounded-3xl hover:scale-[1.2]' />
+                                        <div className='flex justify-between pt-1'>
+                                            <p className=''>SOFA</p>
+                                            <span className=''>25$</span>
+                                        </div>
+                                    </Link>
                                     <div className='justify-between flex px-1 text-[15px] mt-5'>
                                         <button type="button" class="w-full text-white bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 shadow-lg shadow-blue-500/50 dark:shadow-lg dark:shadow-blue-800/80 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 ">RENT</button>
                                     </div>
                                 </div>
                                 <div className='max-w-[240px] max-h-[500px] mb-10 text-center'>
-                                    <img src={images.sofa} className='h-[300px] rounded-3xl  hover:scale-[1.2]' />
-                                    <div className='flex justify-between pt-1'>
-                                        <p className=''>SOFA</p>
-                                        <span className=''>5$</span>
-                                    </div>
+                                    <Link to='/detail'>
+                                        <img src={images.sofa} className='h-[300px] rounded-3xl hover:scale-[1.2]' />
+                                        <div className='flex justify-between pt-1'>
+                                            <p className=''>SOFA</p>
+                                            <span className=''>25$</span>
+                                        </div>
+                                    </Link>
                                     <div className='justify-between flex px-1 text-[15px] mt-5'>
                                         <button type="button" class="w-full text-white bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 shadow-lg shadow-blue-500/50 dark:shadow-lg dark:shadow-blue-800/80 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 ">RENT</button>
                                     </div>
                                 </div>
                                 <div className='max-w-[240px] max-h-[500px] mb-10 text-center'>
-                                    <img src={images.sofa} className='h-[300px] rounded-3xl  hover:scale-[1.2]' />
-                                    <div className='flex justify-between pt-1'>
-                                        <p className=''>SOFA</p>
-                                        <span className=''>5$</span>
-                                    </div>
+                                    <Link to='/detail'>
+                                        <img src={images.sofa} className='h-[300px] rounded-3xl hover:scale-[1.2]' />
+                                        <div className='flex justify-between pt-1'>
+                                            <p className=''>SOFA</p>
+                                            <span className=''>25$</span>
+                                        </div>
+                                    </Link>
                                     <div className='justify-between flex px-1 text-[15px] mt-5'>
                                         <button type="button" class="w-full text-white bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 shadow-lg shadow-blue-500/50 dark:shadow-lg dark:shadow-blue-800/80 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 ">RENT</button>
                                     </div>
                                 </div>
                                 <div className='max-w-[240px] max-h-[500px] mb-10 text-center'>
-                                    <img src={images.sofa} className='h-[300px] rounded-3xl  hover:scale-[1.2]' />
-                                    <div className='flex justify-between pt-1'>
-                                        <p className=''>SOFA</p>
-                                        <span className=''>5$</span>
-                                    </div>
+                                    <Link to='/detail'>
+                                        <img src={images.sofa} className='h-[300px] rounded-3xl hover:scale-[1.2]' />
+                                        <div className='flex justify-between pt-1'>
+                                            <p className=''>SOFA</p>
+                                            <span className=''>25$</span>
+                                        </div>
+                                    </Link>
                                     <div className='justify-between flex px-1 text-[15px] mt-5'>
                                         <button type="button" class="w-full text-white bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 shadow-lg shadow-blue-500/50 dark:shadow-lg dark:shadow-blue-800/80 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 ">RENT</button>
                                     </div>
                                 </div>
                                 <div className='max-w-[240px] max-h-[500px] mb-10 text-center'>
-                                    <img src={images.sofa} className='h-[300px] rounded-3xl  hover:scale-[1.2]' />
-                                    <div className='flex justify-between pt-1'>
-                                        <p className=''>SOFA</p>
-                                        <span className=''>5$</span>
-                                    </div>
+                                    <Link to='/detail'>
+                                        <img src={images.sofa} className='h-[300px] rounded-3xl hover:scale-[1.2]' />
+                                        <div className='flex justify-between pt-1'>
+                                            <p className=''>SOFA</p>
+                                            <span className=''>25$</span>
+                                        </div>
+                                    </Link>
                                     <div className='justify-between flex px-1 text-[15px] mt-5'>
                                         <button type="button" class="w-full text-white bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 shadow-lg shadow-blue-500/50 dark:shadow-lg dark:shadow-blue-800/80 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 ">RENT</button>
                                     </div>
                                 </div>
                                 <div className='max-w-[240px] max-h-[500px] mb-10 text-center'>
-                                    <img src={images.sofa} className='h-[300px] rounded-3xl  hover:scale-[1.2]' />
-                                    <div className='flex justify-between pt-1'>
-                                        <p className=''>SOFA</p>
-                                        <span className=''>5$</span>
-                                    </div>
+                                    <Link to='/detail'>
+                                        <img src={images.sofa} className='h-[300px] rounded-3xl hover:scale-[1.2]' />
+                                        <div className='flex justify-between pt-1'>
+                                            <p className=''>SOFA</p>
+                                            <span className=''>25$</span>
+                                        </div>
+                                    </Link>
                                     <div className='justify-between flex px-1 text-[15px] mt-5'>
                                         <button type="button" class="w-full text-white bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 shadow-lg shadow-blue-500/50 dark:shadow-lg dark:shadow-blue-800/80 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 ">RENT</button>
                                     </div>
@@ -453,102 +465,102 @@ const RentProducts = () => {
                                 <h2 className='items-center text-[36px] text-black font-bold italic '>HOUSEWARES</h2>
                             </div>
                             <div className='relative flex flex-wrap justify-between text-black font-bold'>
-                                <Link to='/detail'>
-                                    <div className='max-w-[240px] max-h-[500px] mb-10 text-center'>
+                                <div className='max-w-[240px] max-h-[500px] mb-10 text-center'>
+                                    <Link to='/detail'>
                                         <img src={images.houseware} className='h-[300px] rounded-3xl hover:scale-[1.2]' />
                                         <div className='flex justify-between pt-1'>
                                             <p className=''>HOUSEWARE</p>
-                                            <span className=''>15$</span>
+                                            <span className=''>25$</span>
                                         </div>
-                                        <div className='justify-between flex px-1 text-[15px] mt-5'>
-                                            <button type="button" class="w-full text-white bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 shadow-lg shadow-blue-500/50 dark:shadow-lg dark:shadow-blue-800/80 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 ">RENT</button>
-                                        </div>
+                                    </Link>
+                                    <div className='justify-between flex px-1 text-[15px] mt-5'>
+                                        <button type="button" class="w-full text-white bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 shadow-lg shadow-blue-500/50 dark:shadow-lg dark:shadow-blue-800/80 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 ">RENT</button>
                                     </div>
-                                </Link>
-                                <Link to='/detail'>
-                                    <div className='max-w-[240px] max-h-[500px] mb-10 text-center'>
+                                </div>
+                                <div className='max-w-[240px] max-h-[500px] mb-10 text-center'>
+                                    <Link to='/detail'>
                                         <img src={images.houseware} className='h-[300px] rounded-3xl hover:scale-[1.2]' />
                                         <div className='flex justify-between pt-1'>
                                             <p className=''>HOUSEWARE</p>
-                                            <span className=''>15$</span>
+                                            <span className=''>25$</span>
                                         </div>
-                                        <div className='justify-between flex px-1 text-[15px] mt-5'>
-                                            <button type="button" class="w-full text-white bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 shadow-lg shadow-blue-500/50 dark:shadow-lg dark:shadow-blue-800/80 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 ">RENT</button>
-                                        </div>
+                                    </Link>
+                                    <div className='justify-between flex px-1 text-[15px] mt-5'>
+                                        <button type="button" class="w-full text-white bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 shadow-lg shadow-blue-500/50 dark:shadow-lg dark:shadow-blue-800/80 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 ">RENT</button>
                                     </div>
-                                </Link>
-                                <Link to='/detail'>
-                                    <div className='max-w-[240px] max-h-[500px] mb-10 text-center'>
+                                </div>
+                                <div className='max-w-[240px] max-h-[500px] mb-10 text-center'>
+                                    <Link to='/detail'>
                                         <img src={images.houseware} className='h-[300px] rounded-3xl hover:scale-[1.2]' />
                                         <div className='flex justify-between pt-1'>
                                             <p className=''>HOUSEWARE</p>
-                                            <span className=''>15$</span>
+                                            <span className=''>25$</span>
                                         </div>
-                                        <div className='justify-between flex px-1 text-[15px] mt-5'>
-                                            <button type="button" class="w-full text-white bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 shadow-lg shadow-blue-500/50 dark:shadow-lg dark:shadow-blue-800/80 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 ">RENT</button>
-                                        </div>
+                                    </Link>
+                                    <div className='justify-between flex px-1 text-[15px] mt-5'>
+                                        <button type="button" class="w-full text-white bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 shadow-lg shadow-blue-500/50 dark:shadow-lg dark:shadow-blue-800/80 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 ">RENT</button>
                                     </div>
-                                </Link>
-                                <Link to='/detail'>
-                                    <div className='max-w-[240px] max-h-[500px] mb-10 text-center'>
+                                </div>
+                                <div className='max-w-[240px] max-h-[500px] mb-10 text-center'>
+                                    <Link to='/detail'>
                                         <img src={images.houseware} className='h-[300px] rounded-3xl hover:scale-[1.2]' />
                                         <div className='flex justify-between pt-1'>
                                             <p className=''>HOUSEWARE</p>
-                                            <span className=''>15$</span>
+                                            <span className=''>25$</span>
                                         </div>
-                                        <div className='justify-between flex px-1 text-[15px] mt-5'>
-                                            <button type="button" class="w-full text-white bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 shadow-lg shadow-blue-500/50 dark:shadow-lg dark:shadow-blue-800/80 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 ">RENT</button>
-                                        </div>
+                                    </Link>
+                                    <div className='justify-between flex px-1 text-[15px] mt-5'>
+                                        <button type="button" class="w-full text-white bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 shadow-lg shadow-blue-500/50 dark:shadow-lg dark:shadow-blue-800/80 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 ">RENT</button>
                                     </div>
-                                </Link>
-                                <Link to='/detail'>
-                                    <div className='max-w-[240px] max-h-[500px] mb-10 text-center'>
+                                </div>
+                                <div className='max-w-[240px] max-h-[500px] mb-10 text-center'>
+                                    <Link to='/detail'>
                                         <img src={images.houseware} className='h-[300px] rounded-3xl hover:scale-[1.2]' />
                                         <div className='flex justify-between pt-1'>
                                             <p className=''>HOUSEWARE</p>
-                                            <span className=''>15$</span>
+                                            <span className=''>25$</span>
                                         </div>
-                                        <div className='justify-between flex px-1 text-[15px] mt-5'>
-                                            <button type="button" class="w-full text-white bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 shadow-lg shadow-blue-500/50 dark:shadow-lg dark:shadow-blue-800/80 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 ">RENT</button>
-                                        </div>
+                                    </Link>
+                                    <div className='justify-between flex px-1 text-[15px] mt-5'>
+                                        <button type="button" class="w-full text-white bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 shadow-lg shadow-blue-500/50 dark:shadow-lg dark:shadow-blue-800/80 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 ">RENT</button>
                                     </div>
-                                </Link>
-                                <Link to='/detail'>
-                                    <div className='max-w-[240px] max-h-[500px] mb-10 text-center'>
+                                </div>
+                                <div className='max-w-[240px] max-h-[500px] mb-10 text-center'>
+                                    <Link to='/detail'>
                                         <img src={images.houseware} className='h-[300px] rounded-3xl hover:scale-[1.2]' />
                                         <div className='flex justify-between pt-1'>
                                             <p className=''>HOUSEWARE</p>
-                                            <span className=''>15$</span>
+                                            <span className=''>25$</span>
                                         </div>
-                                        <div className='justify-between flex px-1 text-[15px] mt-5'>
-                                            <button type="button" class="w-full text-white bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 shadow-lg shadow-blue-500/50 dark:shadow-lg dark:shadow-blue-800/80 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 ">RENT</button>
-                                        </div>
+                                    </Link>
+                                    <div className='justify-between flex px-1 text-[15px] mt-5'>
+                                        <button type="button" class="w-full text-white bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 shadow-lg shadow-blue-500/50 dark:shadow-lg dark:shadow-blue-800/80 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 ">RENT</button>
                                     </div>
-                                </Link>
-                                <Link to='/detail'>
-                                    <div className='max-w-[240px] max-h-[500px] mb-10 text-center'>
+                                </div>
+                                <div className='max-w-[240px] max-h-[500px] mb-10 text-center'>
+                                    <Link to='/detail'>
                                         <img src={images.houseware} className='h-[300px] rounded-3xl hover:scale-[1.2]' />
                                         <div className='flex justify-between pt-1'>
                                             <p className=''>HOUSEWARE</p>
-                                            <span className=''>15$</span>
+                                            <span className=''>25$</span>
                                         </div>
-                                        <div className='justify-between flex px-1 text-[15px] mt-5'>
-                                            <button type="button" class="w-full text-white bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 shadow-lg shadow-blue-500/50 dark:shadow-lg dark:shadow-blue-800/80 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 ">RENT</button>
-                                        </div>
+                                    </Link>
+                                    <div className='justify-between flex px-1 text-[15px] mt-5'>
+                                        <button type="button" class="w-full text-white bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 shadow-lg shadow-blue-500/50 dark:shadow-lg dark:shadow-blue-800/80 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 ">RENT</button>
                                     </div>
-                                </Link>
-                                <Link to='/detail'>
-                                    <div className='max-w-[240px] max-h-[500px] mb-10 text-center'>
+                                </div>
+                                <div className='max-w-[240px] max-h-[500px] mb-10 text-center'>
+                                    <Link to='/detail'>
                                         <img src={images.houseware} className='h-[300px] rounded-3xl hover:scale-[1.2]' />
                                         <div className='flex justify-between pt-1'>
                                             <p className=''>HOUSEWARE</p>
-                                            <span className=''>15$</span>
+                                            <span className=''>25$</span>
                                         </div>
-                                        <div className='justify-between flex px-1 text-[15px] mt-5'>
-                                            <button type="button" class="w-full text-white bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 shadow-lg shadow-blue-500/50 dark:shadow-lg dark:shadow-blue-800/80 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 ">RENT</button>
-                                        </div>
+                                    </Link>
+                                    <div className='justify-between flex px-1 text-[15px] mt-5'>
+                                        <button type="button" class="w-full text-white bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 shadow-lg shadow-blue-500/50 dark:shadow-lg dark:shadow-blue-800/80 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 ">RENT</button>
                                     </div>
-                                </Link>
+                                </div>
                             </div>
                         </div>
                     </div>

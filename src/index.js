@@ -15,7 +15,7 @@ import Profile from './components/Profile/Profile';
 import Bill from './container/Bill/Bill';
 import ForgotPassword from './container/ForgotPassword/ForgotPassword';
 import Contact from './components/Contact/Contact';
-import Blog from './container/Blog/Blog';
+import Blog from './container/CreateBlog/CreateBlog';
 import Post from './container/Post/Post';
 import Error from './components/Error/Error404';
 import Error500 from './components/Error/Error500';

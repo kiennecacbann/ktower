@@ -1,6 +1,6 @@
-import React, {useState} from 'react'
+import React, { useState } from 'react'
 import images from '../../constants/images'
-import { AiFillLike, AiOutlineMessage, AiOutlineCamera,AiOutlineLogout, AiOutlineCaretDown, AiOutlineCaretUp } from 'react-icons/ai'
+import { AiFillLike, AiOutlineMessage, AiOutlineCamera, AiOutlineLogout, AiOutlineCaretDown, AiOutlineCaretUp } from 'react-icons/ai'
 import { BsThreeDots } from 'react-icons/bs'
 import { BiWorld } from 'react-icons/bi'
 import { GoComment } from 'react-icons/go'
@@ -19,9 +19,13 @@ const Post = () => {
                             <p className='font-bold'>BACK</p>
                         </button>
                     </Link>
+
                 </div>
                 <div className='relative items-center justify-between z-[9999] flex'>
                     <div className='flex space-x-5'>
+                        <Link to='/blog'>
+                            <button type="button" class="w-full text-white bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 shadow-lg shadow-blue-500/50 dark:shadow-lg dark:shadow-blue-800/80 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 ">Create Blog</button>
+                        </Link>
                         <div>
                             <button onClick={() => setisOpen((prev) => !prev)} className='space-x-2 duration-500 active:border-black flex items-center justify-between'><img src={images.user} alt='Profile Picture' className='h-10 w-10 rounded-full' />
                                 {!isOpen ? (

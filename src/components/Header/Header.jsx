@@ -44,7 +44,7 @@ export default function Navbar({ fixed }) {
                                 <p className=' '>Report Problem</p>
                             </button>
                         </Link>
-                        <Link to='/blog'>
+                        <Link to='/post'>
                             <button className='cursor-pointer p-1 flex items-center justify-center hover:bg-gray-200 hover:font-bold text-black hover:rounded-xl '>
                                 <p className=' '>Blog</p>
                             </button>
